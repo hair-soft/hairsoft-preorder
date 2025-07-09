@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HairSoft – Dein haarschonendes Handtuch</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom, #fdf6ff, #ffffff);
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 1rem;
+      background: linear-gradient(135deg, #b58dff, #ff92c2);
+      color: white;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.3rem;
+    }
+
+    .section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .feature {
+      background: #ffe4f1;
+      border-left: 6px solid #ff65b1;
+      padding: 1rem;
+      border-radius: 1rem;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      color: #8a4ded;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .highlight {
+      background-color: #fff0fa;
+      padding: 2rem;
+      border-radius: 1rem;
+      border: 2px dashed #dba8ff;
+      box-shadow: 0 3px 12px rgba(139, 92, 246, 0.15);
+    }
+
+    .counter {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #8a4ded;
+      margin: 1rem 0;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    input[type="email"] {
+      padding: 0.75rem;
+      width: 80%;
+      max-width: 400px;
+      border: 2px solid #d6b2ff;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 0.75rem 1.5rem;
+      background: linear-gradient(90deg, #a55cff, #ff65b1);
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    .payment-note {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 1rem;
+      background: #fff4d6;
+      padding: 1rem;
+      border-radius: 0.75rem;
+      border-left: 6px solid #ffaf43;
+    }
+
+    .paypal-button {
+      margin-top: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #fdf6ff;
+      color: #8a4ded;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HairSoft</h1>
+    <p>Das Handtuch, das deine Haare liebt – extraweich & wunderschön</p>
+  </header>
+
+  <section class="section">
+    <h2>Warum HairSoft?</h2>
+    <p>Normale Handtücher schädigen dein Haar. HairSoft ist anders – weich, saugstark und perfekt für jeden Haartyp. Weniger Frizz. Weniger Haarbruch. Mehr Pflege.</p>
+
+    <div class="features">
+      <div class="feature">
+        <strong>Ultra-weiche Mikrofaser</strong>
+        <p>Sanft zu Locken, Glatthaar & Afro</p>
+      </div>
+      <div class="feature">
+        <strong>Kein Haarbruch</strong>
+        <p>Glatte Struktur schützt die Haarfaser</p>
+      </div>
+      <div class="feature">
+        <strong>Schnelltrocknend</strong>
+        <p>Leicht & effizient – ideal für den Alltag</p>
+      </div>
+      <div class="feature">
+        <strong>Mit Stil</strong>
+        <p>Modernes Design in Wolkenform mit Knopf – fixierbar als Turban</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Jetzt verbindlich vorbestellen & HairSoft möglich machen</h2>
+    <div class="highlight">
+      <p><strong>Wir brauchen deine Unterstützung!</strong></p>
+      <p>Damit wir HairSoft produzieren können, brauchen wir mindestens <strong>500 Vorbestellungen</strong>. Du sicherst dir nicht nur dein Exemplar, sondern ermöglichst die gesamte Produktion!</p>
+      <p class="counter">🚀 Aktueller Stand: <strong>162 von 500</strong> Vorbestellungen</p>
+      <p><strong>Dein Beitrag zählt – jetzt verbindlich vorbestellen & mitmachen.</strong></p>
+    </div>
+
+    <form action="https://buy.stripe.com/test_5kA7vOahF4kx0rO6op" method="GET" style="margin-top: 2rem;">
+      <input type="email" name="email" placeholder="Deine E-Mail" required>
+      <button type="submit">💜 Jetzt verbindlich vorbestellen & bezahlen (mit Karte)</button>
+    </form>
+
+    <div class="paypal-button">
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="antonellohairsoft@gmail.com">
+        <input type="hidden" name="item_name" value="HairSoft Vorbestellung">
+        <input type="hidden" name="amount" value="19.90">
+        <input type="hidden" name="currency_code" value="EUR">
+        <button type="submit">🧡 Mit PayPal vorbestellen</button>
+      </form>
+    </div>
+
+    <div class="payment-note">
+      <strong>Wichtig:</strong> Deine Vorbestellung wird sofort bezahlt. Dadurch hilfst du uns, die Produktion zu starten. Falls das Ziel von 500 Stück nicht erreicht wird, bekommst du dein Geld vollständig zurück – garantiert!
+    </div>
+  </section>
+
+  <footer role="contentinfo">
+    &copy; 2025 HairSoft – Alle Rechte vorbehalten
+  </footer>
+</body>
+</html>
