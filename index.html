@@ -6,7 +6,7 @@
   <title>HairSoft – Dein haarschonendes Handtuch</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
-    /* CSS-Regeln hier: */
+    /* Grundlayout */
     body {
       font-family: 'Quicksand', sans-serif;
       background: linear-gradient(to bottom, #fdf6ff, #ffffff);
@@ -15,6 +15,7 @@
       padding: 0;
     }
 
+    /* Banner ganz oben */
     .banner {
       width: 100%;
       max-height: 300px;
@@ -25,7 +26,6 @@
       background-color: #fff;
       padding: 1rem 0;
     }
-
     .banner img {
       width: auto;
       max-width: 100%;
@@ -33,49 +33,68 @@
       object-fit: contain;
     }
 
+    /* Header */
     header {
       text-align: center;
       padding: 3rem 1rem 1rem;
       background: linear-gradient(135deg, #b58dff, #ff92c2);
       color: white;
     }
-
+    header h1, header p {
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: fadeInDown 1s forwards;
+    }
+    header p {
+      animation-delay: 0.5s;
+      font-size: 1.3rem;
+      margin-top: 0;
+    }
     header h1 {
       font-size: 3rem;
       margin-bottom: 0.5rem;
     }
-
-    header p {
-      font-size: 1.3rem;
+    @keyframes fadeInDown {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
+    /* Sections */
     .section {
       padding: 2rem;
       max-width: 800px;
       margin: 0 auto;
     }
 
+    /* Features */
     .features {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 1.5rem;
       margin-top: 1rem;
     }
-
     .feature {
       background: #ffe4f1;
       border-left: 6px solid #ff65b1;
       padding: 1rem;
       border-radius: 1rem;
       box-shadow: 0 6px 10px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      cursor: default;
     }
-
+    .feature:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(255, 101, 177, 0.3);
+    }
     h2 {
       color: #8a4ded;
       font-size: 2rem;
       margin-bottom: 1rem;
     }
 
+    /* Highlight Box */
     .highlight {
       background-color: #fff0fa;
       padding: 2rem;
@@ -84,6 +103,7 @@
       box-shadow: 0 3px 12px rgba(139, 92, 246, 0.15);
     }
 
+    /* Counter */
     .counter {
       font-size: 1.6rem;
       font-weight: bold;
@@ -91,13 +111,13 @@
       margin: 1rem 0;
     }
 
+    /* Form */
     form {
       display: flex;
       flex-direction: column;
       gap: 1rem;
       align-items: center;
     }
-
     input[type="email"] {
       padding: 0.75rem;
       width: 80%;
@@ -106,7 +126,6 @@
       border-radius: 0.5rem;
       font-size: 1rem;
     }
-
     button {
       padding: 0.75rem 1.5rem;
       background: linear-gradient(90deg, #a55cff, #ff65b1);
@@ -115,13 +134,14 @@
       border-radius: 0.5rem;
       font-size: 1.1rem;
       cursor: pointer;
-      transition: transform 0.2s, background-color 0.3s;
+      transition: transform 0.3s, background-color 0.3s;
     }
-
     button:hover {
-      transform: scale(1.05);
+      background: linear-gradient(90deg, #ff65b1, #a55cff);
+      transform: scale(1.1);
     }
 
+    /* Payment note */
     .payment-note {
       font-size: 0.95rem;
       color: #555;
@@ -130,24 +150,90 @@
       padding: 1rem;
       border-radius: 0.75rem;
       border-left: 6px solid #ffaf43;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .paypal-button {
       margin-top: 1.5rem;
     }
 
+    /* Footer */
     footer {
       text-align: center;
       padding: 2rem;
       background-color: #fdf6ff;
       color: #8a4ded;
     }
+
+    /* Social Media Buttons */
+    .social-icons {
+      margin-top: 1rem;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #8a4ded;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #ff65b1;
+    }
+
+    /* Gallery */
+    .gallery {
+      padding: 2rem;
+      max-width: 900px;
+      margin: 2rem auto;
+      text-align: center;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 1rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+      .features {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      .features {
+        grid-template-columns: 1fr;
+      }
+      input[type="email"], button {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
 
   <div class="banner">
-    <img src="images/hair-soft-logo.png" alt="Hair-Soft Logo" />
+    <img src="images/hair-soft-logo.png" alt="HairSoft Logo" />
   </div>
 
   <header>
@@ -179,6 +265,16 @@
     </div>
   </section>
 
+  <!-- Galerie -->
+  <section class="gallery">
+    <h2>Unsere Handtücher in Aktion</h2>
+    <div class="gallery-grid">
+      <img src="images/towel1.jpg" alt="HairSoft Handtuch 1" />
+      <img src="images/towel2.jpg" alt="HairSoft Handtuch 2" />
+      <img src="images/towel3.jpg" alt="HairSoft Handtuch 3" />
+    </div>
+  </section>
+
   <section class="section">
     <h2>Jetzt verbindlich vorbestellen & HairSoft möglich machen</h2>
     <div class="highlight">
@@ -188,30 +284,52 @@
       <p><strong>Dein Beitrag zählt – jetzt verbindlich vorbestellen & mitmachen.</strong></p>
     </div>
 
-    <form action="https://buy.stripe.com/test_5kA7vOahF4kx0rO6op" method="GET" style="margin-top: 2rem;">
+    <form id="preorder-form" style="margin-top: 2rem;">
       <input type="email" name="email" placeholder="Deine E-Mail" required />
       <button type="submit">💜 Jetzt verbindlich vorbestellen & bezahlen (mit Karte)</button>
     </form>
+
+    <p id="confirmation-message" style="display:none; color:green; font-weight:bold; margin-top:1rem;">
+      Danke für deine Vorbestellung! Wir melden uns bald bei dir.
+    </p>
 
     <div class="paypal-button">
       <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
         <input type="hidden" name="cmd" value="_xclick" />
         <input type="hidden" name="business" value="antonellohairsoft@gmail.com" />
-        <input type="hidden" name="item_name" value="HairSoft Vorbestellung" />
-        <input type="hidden" name="amount" value="19.90" />
+        <input type="hidden" name="item_name" value="HairSoft - Handtuch Vorbestellung" />
+        <input type="hidden" name="amount" value="35.99" />
         <input type="hidden" name="currency_code" value="EUR" />
-        <button type="submit">🧡 Mit PayPal vorbestellen</button>
+        <button type="submit" style="padding:0.75rem 1.5rem; background:#ffc439; border:none; border-radius:0.5rem; cursor:pointer; font-weight:bold;">
+          💳 Vorbestellen mit PayPal
+        </button>
       </form>
     </div>
 
-    <div class="payment-note">
-      <strong>Wichtig:</strong> Deine Vorbestellung wird sofort bezahlt. Dadurch hilfst du uns, die Produktion zu starten. Falls das Ziel von 500 Stück nicht erreicht wird, bekommst du dein Geld vollständig zurück – garantiert!
-    </div>
+    <p class="payment-note">
+      * Du zahlst erst bei Versand. Deine Daten sind sicher und werden nicht weitergegeben.
+    </p>
   </section>
 
   <footer role="contentinfo">
     &copy; 2025 HairSoft – Alle Rechte vorbehalten
+    <div class="social-icons" aria-label="Social Media Links">
+      <a href="https://facebook.com" target="_blank" aria-label="Facebook">👍 Facebook</a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram">📸 Instagram</a>
+    </div>
   </footer>
 
+  <script>
+    // Formular-Handling mit Bestätigungsmeldung
+    const form = document.getElementById('preorder-form');
+    const message = document.getElementById('confirmation-message');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      // Hier könnte die Zahlungslogik kommen (z.B. Stripe, PayPal-API etc.)
+      form.style.display = 'none';
+      message.style.display = 'block';
+    });
+  </script>
 </body>
 </html>
