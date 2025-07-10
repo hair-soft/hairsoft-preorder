@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>HairSoft – Dein haarschonendes Handtuch</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
+    /* CSS-Regeln hier: */
     body {
       font-family: 'Quicksand', sans-serif;
       background: linear-gradient(to bottom, #fdf6ff, #ffffff);
       color: #333;
       margin: 0;
       padding: 0;
+    }
+
+    .banner {
+      width: 100%;
+      max-height: 300px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      padding: 1rem 0;
+    }
+
+    .banner img {
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
     }
 
     header {
@@ -126,6 +145,11 @@
   </style>
 </head>
 <body>
+
+  <div class="banner">
+    <img src="images/hair-soft-logo.png" alt="Hair-Soft Logo" />
+  </div>
+
   <header>
     <h1>HairSoft</h1>
     <p>Das Handtuch, das deine Haare liebt – extraweich & wunderschön</p>
@@ -165,17 +189,17 @@
     </div>
 
     <form action="https://buy.stripe.com/test_5kA7vOahF4kx0rO6op" method="GET" style="margin-top: 2rem;">
-      <input type="email" name="email" placeholder="Deine E-Mail" required>
+      <input type="email" name="email" placeholder="Deine E-Mail" required />
       <button type="submit">💜 Jetzt verbindlich vorbestellen & bezahlen (mit Karte)</button>
     </form>
 
     <div class="paypal-button">
       <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-        <input type="hidden" name="cmd" value="_xclick">
-        <input type="hidden" name="business" value="antonellohairsoft@gmail.com">
-        <input type="hidden" name="item_name" value="HairSoft Vorbestellung">
-        <input type="hidden" name="amount" value="19.90">
-        <input type="hidden" name="currency_code" value="EUR">
+        <input type="hidden" name="cmd" value="_xclick" />
+        <input type="hidden" name="business" value="antonellohairsoft@gmail.com" />
+        <input type="hidden" name="item_name" value="HairSoft Vorbestellung" />
+        <input type="hidden" name="amount" value="19.90" />
+        <input type="hidden" name="currency_code" value="EUR" />
         <button type="submit">🧡 Mit PayPal vorbestellen</button>
       </form>
     </div>
@@ -188,10 +212,6 @@
   <footer role="contentinfo">
     &copy; 2025 HairSoft – Alle Rechte vorbehalten
   </footer>
-</body>
-  <!-- Banner ganz oben -->
-<div class="banner">
-  <img src="images/hair-soft-logo.png" alt="Hair-Soft Logo">
-</div>
 
+</body>
 </html>
