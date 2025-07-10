@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Hair-Soft Preorder</title>
+  <style>
+    /* Banner-Container */
+    .banner {
+      width: 100%;
+      max-height: 300px;      /* max-Höhe anpassen */
+      overflow: hidden;       /* Bildüberschuss ausblenden */
+      display: flex;
+      justify-content: center;/* horizontal zentrieren */
+      align-items: center;    /* vertikal zentrieren */
+      background-color: #fff; /* optionaler Hintergrund */
+    }
+    .banner img {
+      width: 100%;            /* volle Breite des Containers */
+      height: auto;           /* Höhe automatisch */
+      object-fit: cover;      /* Bild skaliert, ohne zu verzerren */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Banner oben auf der Seite -->
+  <div class="banner">
+    <img src="images/hair-soft-logo.png" alt="Hair-Soft Logo">
+  </div>
+
+  <!-- Weiterer Seiteninhalt -->
+  <main>
+    <h1>Willkommen bei Hair-Soft!</h1>
+    <p>Bestelle jetzt dein haarschonendes Handtuch vor.</p>
+    <!-- … -->
+  </main>
+
+</body>
+</html>
