@@ -6,33 +6,38 @@
   <title>HairSoft – Vorbestellung</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background-color: #f7f7f7;
+      background-color: #eaf7fc;
       color: #333;
     }
 
     header {
-      background-color: #fff;
-      padding: 20px;
       text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 40px 20px 20px;
     }
 
     header img {
-      height: 60px;
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      border-radius: 50%;
+      background-color: #fff;
+      padding: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
     h1 {
-      margin-top: 10px;
-      font-size: 24px;
+      font-size: 28px;
+      margin: 20px 0 10px;
+      color: #0d6efd;
     }
 
-    .intro {
+    p.intro {
       max-width: 700px;
-      margin: 20px auto;
-      text-align: center;
+      margin: 0 auto 30px;
       font-size: 18px;
+      color: #444;
     }
 
     .vorteile {
@@ -40,17 +45,18 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 20px;
-      margin: 30px auto;
       max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
     }
 
     .vorteil {
-      background-color: #fff;
-      border-left: 6px solid #55c2da;
+      background-color: white;
       padding: 20px;
+      border-radius: 10px;
       width: 280px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-left: 5px solid #0d6efd;
     }
 
     .counter {
@@ -67,24 +73,22 @@
       max-width: 700px;
       margin: 40px auto;
       border-radius: 8px;
-    }
-
-    .highlight strong {
-      color: #c77f00;
+      color: #795200;
     }
 
     form {
       max-width: 600px;
       margin: 40px auto;
-      padding: 20px;
-      background-color: #ffffff;
+      padding: 25px;
+      background-color: white;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      border-radius: 10px;
+      border-radius: 12px;
     }
 
     form label {
       display: block;
       margin-top: 15px;
+      font-weight: bold;
     }
 
     form input {
@@ -96,9 +100,8 @@
     }
 
     .paypal-button {
-      display: block;
-      margin: 30px auto;
       text-align: center;
+      margin-top: 30px;
     }
 
     .paypal-button button {
@@ -116,12 +119,13 @@
     }
 
     footer {
-      background-color: #222;
-      color: #fff;
+      background-color: #0d6efd;
+      color: white;
       text-align: center;
       padding: 20px;
-      margin-top: 40px;
+      margin-top: 60px;
     }
+
   </style>
 </head>
 <body>
@@ -129,34 +133,26 @@
   <header>
     <img src="hair-soft-logo.png" alt="HairSoft Logo">
     <h1>HairSoft – Das haarschonende Handtuch</h1>
+    <p class="intro">Das ideale Handtuch für Locken, Wellen, glattes und empfindliches Haar. Jetzt vorbestellen für nur <strong>14,99 €</strong>!</p>
   </header>
 
-  <div class="intro">
-    <p>Schütze dein Haar mit unserem speziell entwickelten Handtuch für alle Haartypen. Jetzt zum Einführungspreis vorbestellen!</p>
-  </div>
-
-  <div class="vorteile">
-    <div class="vorteil">
-      ✅ Für alle Haartypen geeignet – Locken, Glatt, Wellen
-    </div>
-    <div class="vorteil">
-      ✅ Extra weiches & saugfähiges Material
-    </div>
-    <div class="vorteil">
-      ✅ Keine Reibung, kein Frizz – ideal für gesundes Haar
-    </div>
-  </div>
+  <section class="vorteile">
+    <div class="vorteil">🌟 Besonders weich & haarschonend</div>
+    <div class="vorteil">🌿 Für alle Haartypen geeignet</div>
+    <div class="vorteil">💧 Saugstark & schnell trocknend</div>
+  </section>
 
   <div class="counter">
-    🎉 Bereits <span id="counter">76</span> Vorbestellungen!
+    🎉 Bereits <span id="counter">76</span> Vorbestellungen
   </div>
 
   <div class="highlight">
-    <strong>Wichtig:</strong> Deine Vorbestellung wird sofort bezahlt. Dadurch hilfst du uns, die Produktion zu starten. Falls das Ziel von 500 Stück nicht erreicht wird, bekommst du dein Geld vollständig zurück – garantiert!
+    <strong>Wichtig:</strong> Deine Zahlung hilft uns, die Produktion zu starten. Falls wir unser Ziel (500 Stück) nicht erreichen, bekommst du dein Geld vollständig zurück.
   </div>
 
   <form>
-    <h2>Vorbestellen für nur 14,99 €</h2>
+    <h2 style="text-align:center; color:#0d6efd;">Jetzt vorbestellen</h2>
+
     <label for="vorname">Vorname*</label>
     <input type="text" id="vorname" name="vorname" required>
 
@@ -176,16 +172,16 @@
     <input type="text" id="ort" name="ort" required>
 
     <div class="paypal-button">
-      <!-- PayPal Button: Füge deinen echten PayPal-Link ein -->
+      <!-- DEIN PayPal.me-Link hier -->
       <button onclick="window.location.href='https://www.paypal.com/paypalme/DEINBENUTZERNAME/14.99'; return false;">
-        Jetzt für 14,99 € mit PayPal vorbestellen
+        Für 14,99 € mit PayPal vorbestellen
       </button>
-      <p style="font-size: 14px; color: gray; margin-top: 10px;">Später kostet das Handtuch 19,99 €. Jetzt zum Sonderpreis sichern!</p>
+      <p style="font-size: 14px; color: gray; margin-top: 10px;">Später kostet das Handtuch 19,99 €</p>
     </div>
   </form>
 
   <footer>
-    &copy; 2025 HairSoft – Alle Rechte vorbehalten
+    &copy; 2025 HairSoft – Entwickelt mit Liebe für dein Haar
   </footer>
 
 </body>
