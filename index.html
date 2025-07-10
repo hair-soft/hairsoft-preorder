@@ -165,15 +165,13 @@
     </div>
 
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-      <!-- PayPal-Parameter -->
       <input type="hidden" name="cmd" value="_xclick">
-      <input type="hidden" name="business" value="DEIN_PAYPAL_EMAIL@beispiel.de"> <!-- <== HIER DEINE PAYPAL-EMAIL -->
+      <input type="hidden" name="business" value="DEIN_PAYPAL_EMAIL@beispiel.de">
       <input type="hidden" name="item_name" value="HairSoft Vorbestellung – Sonderpreis">
       <input type="hidden" name="amount" value="14.99">
       <input type="hidden" name="currency_code" value="EUR">
       <input type="hidden" name="no_shipping" value="0">
 
-      <!-- Kundendaten -->
       <input type="text" name="first_name" placeholder="Vorname" required>
       <input type="text" name="last_name" placeholder="Nachname" required>
       <input type="text" name="address1" placeholder="Straße & Hausnummer" required>
@@ -191,3 +189,4 @@
 
 </body>
 </html>
+
