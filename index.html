@@ -89,8 +89,36 @@
       font-weight: 800;
     }
 
-    .rocket {
-      margin-right: 6px;
+    form {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, button {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+
+    button {
+      background: linear-gradient(90deg, #b478f1, #ff7eb9);
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(90deg, #a464e1, #ff5db9);
+    }
+
+    .paypal-note {
+      font-size: 0.9em;
+      color: #666;
     }
 
     @media (max-width: 600px) {
@@ -135,10 +163,24 @@
     <section class="preorder-box">
       <p><strong>Nur jetzt: Vorbestellung für 14,99 €</strong> <span style="font-size: 0.9em">(statt 19,99 €)</span></p>
       <p>Damit wir HairSoft produzieren können, brauchen wir mindestens <strong>500 Vorbestellungen</strong>. Du sicherst dir nicht nur ein Exemplar, sondern ermöglichst die gesamte Produktion!</p>
-      <p class="highlight"><span class="rocket">🚀</span> Aktueller Stand: <strong>117 von 500 Vorbestellungen</strong></p>
+      <p class="highlight">🚀 Aktueller Stand: <strong>117 von 500 Vorbestellungen</strong></p>
       <p><em>Jetzt zugreifen – dieses Angebot ist nur für kurze Zeit!</em></p>
+
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="DEINE_PAYPAL_MAIL@example.com"> <!-- Ersetze mit deiner echten PayPal-Mail -->
+        <input type="hidden" name="item_name" value="HairSoft Handtuch – Vorbestellung">
+        <input type="hidden" name="amount" value="14.99">
+        <input type="hidden" name="currency_code" value="EUR">
+        
+        <input type="text" name="first_name" placeholder="Vorname" required>
+        <input type="text" name="last_name" placeholder="Nachname" required>
+        <input type="email" name="email" placeholder="E-Mail-Adresse" required>
+
+        <button type="submit">Jetzt vorbestellen mit PayPal</button>
+        <p class="paypal-note">Die Zahlung erfolgt sicher über PayPal.</p>
+      </form>
     </section>
   </main>
 </body>
 </html>
-
