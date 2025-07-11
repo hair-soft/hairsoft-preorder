@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>HairSoft – Dein haarschonendes Handtuch</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -22,13 +22,13 @@
     }
 
     .banner img {
-      width: 220px;
+      width: 180px;
       height: auto;
     }
 
     header {
       text-align: center;
-      padding: 3rem 1rem 1rem;
+      padding: 2rem 1rem;
       background: linear-gradient(135deg, #b58dff, #ff92c2);
       color: white;
     }
@@ -44,7 +44,7 @@
 
     .section {
       padding: 2rem;
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
     }
 
@@ -75,7 +75,6 @@
       border-radius: 1rem;
       border: 2px dashed #dba8ff;
       box-shadow: 0 3px 12px rgba(139, 92, 246, 0.15);
-      margin-top: 2rem;
     }
 
     .counter {
@@ -92,18 +91,13 @@
       margin-top: 2rem;
     }
 
-    input[type="text"],
-    input[type="email"] {
+    input, select {
       padding: 0.75rem;
       width: 100%;
+      max-width: 600px;
       border: 2px solid #d6b2ff;
       border-radius: 0.5rem;
       font-size: 1rem;
-    }
-
-    label {
-      font-weight: 600;
-      font-size: 0.95rem;
     }
 
     button {
@@ -115,27 +109,25 @@
       font-size: 1.1rem;
       cursor: pointer;
       transition: transform 0.2s, background-color 0.3s;
+      max-width: 600px;
     }
 
     button:hover {
       transform: scale(1.05);
     }
 
+    .paypal-button {
+      margin-top: 1.5rem;
+    }
+
     .payment-note {
       font-size: 0.95rem;
       color: #555;
-      margin-top: 1rem;
+      margin-top: 2rem;
       background: #fff4d6;
       padding: 1rem;
       border-radius: 0.75rem;
       border-left: 6px solid #ffaf43;
-    }
-
-    .checkbox-wrapper {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.9rem;
     }
 
     footer {
@@ -143,12 +135,10 @@
       padding: 2rem;
       background-color: #fdf6ff;
       color: #8a4ded;
-      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
-
   <div class="banner">
     <img src="images/hair-soft-logo.png" alt="HairSoft Logo">
   </div>
@@ -161,7 +151,6 @@
   <section class="section">
     <h2>Warum HairSoft?</h2>
     <p>Normale Handtücher schädigen dein Haar. HairSoft ist anders – weich, saugstark und perfekt für jeden Haartyp. Weniger Frizz. Weniger Haarbruch. Mehr Pflege.</p>
-
     <div class="features">
       <div class="feature">
         <strong>Ultra-weiche Mikrofaser</strong>
@@ -180,23 +169,25 @@
         <p>Modernes Design in Wolkenform mit Knopf – fixierbar als Turban</p>
       </div>
     </div>
+  </section>
 
+  <section class="section">
+    <h2>Jetzt vorbestellen – nur 14,99 € statt später 19,99 €</h2>
     <div class="highlight">
-      <p><strong>JETZT zum Sonderpreis vorbestellen:</strong> Nur <strong>14,99 €</strong> (statt später 19,99 €)</p>
-      <p>Damit wir HairSoft produzieren können, brauchen wir mindestens <strong>500 Vorbestellungen</strong>. Du sicherst dir nicht nur dein Exemplar, sondern ermöglichst die Produktion!</p>
+      <p><strong>Wir brauchen deine Unterstützung!</strong></p>
+      <p>Damit wir HairSoft produzieren können, brauchen wir mindestens <strong>500 Vorbestellungen</strong>.</p>
       <p class="counter">🚀 Aktueller Stand: <strong>117 von 500</strong> Vorbestellungen</p>
-      <p><strong>Schlag jetzt zu!</strong> Das Angebot gilt nur bis Produktionsstart.</p>
+      <p><strong>Jetzt zugreifen – nur für kurze Zeit zum Vorbesteller-Preis!</strong></p>
+      <p><strong>Wichtig:</strong> Deine Vorbestellung wird sofort bezahlt. Dadurch hilfst du uns, die Produktion zu starten. Falls das Ziel von 500 Stück nicht erreicht wird, bekommst du dein Geld vollständig zurück – garantiert!</p>
     </div>
 
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-      <!-- PayPal-Konfiguration -->
       <input type="hidden" name="cmd" value="_xclick">
-      <input type="hidden" name="business" value="DEINE_PAYPAL_EMAIL">
-      <input type="hidden" name="item_name" value="HairSoft Handtuch – Vorbestellung">
+      <input type="hidden" name="business" value="antonellohairsoft@gmail.com">
+      <input type="hidden" name="item_name" value="HairSoft Vorbestellung">
       <input type="hidden" name="amount" value="14.99">
       <input type="hidden" name="currency_code" value="EUR">
 
-      <!-- Adressdaten -->
       <input type="text" name="first_name" placeholder="Vorname" required>
       <input type="text" name="last_name" placeholder="Nachname" required>
       <input type="email" name="email" placeholder="E-Mail-Adresse" required>
@@ -205,22 +196,16 @@
       <input type="text" name="city" placeholder="Ort" required>
       <input type="text" name="country" placeholder="Land" required>
 
-      <div class="checkbox-wrapper">
-        <input type="checkbox" required>
-        <label>Ich stimme der Datenverarbeitung zum Versand zu</label>
-      </div>
-
-      <button type="submit">💜 Jetzt vorbestellen mit PayPal</button>
-
-      <div class="payment-note">
-        <strong>Wichtig:</strong> Deine Vorbestellung wird sofort bezahlt. Dadurch hilfst du uns, die Produktion zu starten. Falls das Ziel von 500 Stück nicht erreicht wird, bekommst du dein Geld vollständig zurück – garantiert!
-      </div>
+      <button type="submit">💜 Jetzt mit PayPal vorbestellen</button>
     </form>
+
+    <div class="payment-note">
+      <strong>Wichtig:</strong> Deine Vorbestellung wird sofort bezahlt. Falls wir die 500 Stück nicht schaffen, bekommst du dein Geld vollständig zurück.
+    </div>
   </section>
 
   <footer>
     &copy; 2025 HairSoft – Alle Rechte vorbehalten
   </footer>
-
 </body>
 </html>
