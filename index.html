@@ -8,13 +8,14 @@
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background-color: #eaf7fc;
+      background-color: #f5f0fa;
       color: #333;
     }
 
     header {
       text-align: center;
       padding: 40px 20px 20px;
+      background: linear-gradient(135deg, #d4b4f4, #f0e6ff);
     }
 
     header img {
@@ -28,9 +29,9 @@
     }
 
     h1 {
-      font-size: 28px;
+      font-size: 30px;
       margin: 20px 0 10px;
-      color: #0d6efd;
+      color: #6f2dbd;
     }
 
     p.intro {
@@ -56,7 +57,7 @@
       border-radius: 10px;
       width: 280px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      border-left: 5px solid #0d6efd;
+      border-left: 5px solid #b16dff;
     }
 
     .counter {
@@ -67,13 +68,13 @@
     }
 
     .highlight {
-      background-color: #fff3cd;
-      border-left: 6px solid #ffc107;
+      background-color: #f8e8ff;
+      border-left: 6px solid #b16dff;
       padding: 20px;
       max-width: 700px;
       margin: 40px auto;
       border-radius: 8px;
-      color: #795200;
+      color: #5b1d91;
     }
 
     form {
@@ -105,21 +106,21 @@
     }
 
     .paypal-button button {
-      background-color: #ffc439;
+      background-color: #b16dff;
       border: none;
       padding: 15px 30px;
       font-size: 18px;
       border-radius: 8px;
       cursor: pointer;
-      color: #111;
+      color: white;
     }
 
     .paypal-button button:hover {
-      background-color: #e0aa1f;
+      background-color: #a259e8;
     }
 
     footer {
-      background-color: #0d6efd;
+      background-color: #6f2dbd;
       color: white;
       text-align: center;
       padding: 20px;
@@ -133,7 +134,7 @@
   <header>
     <img src="hair-soft-logo.png" alt="HairSoft Logo">
     <h1>HairSoft – Das haarschonende Handtuch</h1>
-    <p class="intro">Das ideale Handtuch für Locken, Wellen, glattes und empfindliches Haar. Jetzt vorbestellen für nur <strong>14,99 €</strong>!</p>
+    <p class="intro">Sanft. Saugstark. Stylisch. Jetzt vorbestellen für nur <strong>14,99 €</strong> – nur für kurze Zeit!</p>
   </header>
 
   <section class="vorteile">
@@ -147,11 +148,11 @@
   </div>
 
   <div class="highlight">
-    <strong>Wichtig:</strong> Deine Zahlung hilft uns, die Produktion zu starten. Falls wir unser Ziel (500 Stück) nicht erreichen, bekommst du dein Geld vollständig zurück.
+    <strong>Hinweis:</strong> Wir starten die Produktion ab 500 Vorbestellungen. Wird das Ziel nicht erreicht, bekommst du dein Geld vollständig zurück.
   </div>
 
   <form>
-    <h2 style="text-align:center; color:#0d6efd;">Jetzt vorbestellen</h2>
+    <h2 style="text-align:center; color:#6f2dbd;">Jetzt vorbestellen</h2>
 
     <label for="vorname">Vorname*</label>
     <input type="text" id="vorname" name="vorname" required>
@@ -172,7 +173,6 @@
     <input type="text" id="ort" name="ort" required>
 
     <div class="paypal-button">
-      <!-- DEIN PayPal.me-Link hier -->
       <button onclick="window.location.href='https://www.paypal.com/paypalme/DEINBENUTZERNAME/14.99'; return false;">
         Für 14,99 € mit PayPal vorbestellen
       </button>
@@ -181,7 +181,7 @@
   </form>
 
   <footer>
-    &copy; 2025 HairSoft – Entwickelt mit Liebe für dein Haar
+    &copy; 2025 HairSoft – Für gesundes und glückliches Haar
   </footer>
 
 </body>
