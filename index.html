@@ -1,131 +1,157 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HairSoft – Vorbestellen</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HairSoft – Dein haarschonendes Handtuch</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Nunito', sans-serif;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom, #fdf6ff, #ffffff);
+      color: #333;
       margin: 0;
       padding: 0;
-      background: #fff5fb;
-      color: #333;
+    }
+
+    .banner {
+      width: 100%;
+      background-color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    .banner img {
+      width: 220px;
+      height: auto;
     }
 
     header {
-      background: linear-gradient(to right, #c084fc, #f472b6);
-      padding: 60px 20px;
       text-align: center;
+      padding: 3rem 1rem 1rem;
+      background: linear-gradient(135deg, #b58dff, #ff92c2);
       color: white;
     }
 
     header h1 {
-      font-size: 3em;
-      margin: 0;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
     }
 
     header p {
-      font-size: 1.2em;
-      margin-top: 10px;
+      font-size: 1.3rem;
     }
 
     .section {
-      padding: 40px 20px;
-      max-width: 900px;
+      padding: 2rem;
+      max-width: 800px;
       margin: 0 auto;
     }
 
-    h2 {
-      color: #9333ea;
-      font-size: 2em;
-      margin-bottom: 20px;
-    }
-
     .features {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
     }
 
-    .feature-box {
-      flex: 1 1 200px;
-      background: #ffe4f0;
-      border-left: 6px solid #f472b6;
-      padding: 15px;
-      border-radius: 12px;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+    .feature {
+      background: #ffe4f1;
+      border-left: 6px solid #ff65b1;
+      padding: 1rem;
+      border-radius: 1rem;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.05);
     }
 
-    .preorder-box {
-      background: #fff0fd;
-      padding: 30px;
-      border-radius: 16px;
-      border: 2px dashed #d8b4fe;
-      margin-top: 20px;
-    }
-
-    .preorder-box p {
-      margin-bottom: 15px;
-      line-height: 1.5;
+    h2 {
+      color: #8a4ded;
+      font-size: 2rem;
+      margin-bottom: 1rem;
     }
 
     .highlight {
-      font-size: 1.2em;
+      background-color: #fff0fa;
+      padding: 2rem;
+      border-radius: 1rem;
+      border: 2px dashed #dba8ff;
+      box-shadow: 0 3px 12px rgba(139, 92, 246, 0.15);
+      margin-top: 2rem;
+    }
+
+    .counter {
+      font-size: 1.6rem;
       font-weight: bold;
-      color: #9333ea;
+      color: #8a4ded;
+      margin: 1rem 0;
     }
 
     form {
       display: flex;
       flex-direction: column;
-      gap: 12px;
-      margin-top: 20px;
+      gap: 1rem;
+      margin-top: 2rem;
     }
 
-    input, button {
-      padding: 12px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 1em;
+    input[type="text"],
+    input[type="email"] {
+      padding: 0.75rem;
+      width: 100%;
+      border: 2px solid #d6b2ff;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+    }
+
+    label {
+      font-weight: 600;
+      font-size: 0.95rem;
     }
 
     button {
-      background: linear-gradient(to right, #a855f7, #ec4899);
+      padding: 0.75rem 1.5rem;
+      background: linear-gradient(90deg, #a55cff, #ff65b1);
       color: white;
-      font-weight: bold;
-      cursor: pointer;
       border: none;
-      transition: background 0.3s;
+      border-radius: 0.5rem;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.3s;
     }
 
     button:hover {
-      background: linear-gradient(to right, #9333ea, #f43f5e);
+      transform: scale(1.05);
     }
 
-    .paypal-note {
-      font-size: 0.85em;
+    .payment-note {
+      font-size: 0.95rem;
       color: #555;
+      margin-top: 1rem;
+      background: #fff4d6;
+      padding: 1rem;
+      border-radius: 0.75rem;
+      border-left: 6px solid #ffaf43;
+    }
+
+    .checkbox-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    footer {
       text-align: center;
-      margin-top: 10px;
-    }
-
-    .progress-bar-container {
-      background: #f0d9ff;
-      border-radius: 8px;
-      overflow: hidden;
-      height: 20px;
-    }
-
-    .progress-bar-fill {
-      background: linear-gradient(to right, #a855f7, #ec4899);
-      height: 100%;
-      width: 23.4%; /* Dynamisch: 117 von 500 = 23.4% */
+      padding: 2rem;
+      background-color: #fdf6ff;
+      color: #8a4ded;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
+
+  <div class="banner">
+    <img src="images/hair-soft-logo.png" alt="HairSoft Logo">
+  </div>
 
   <header>
     <h1>HairSoft</h1>
@@ -134,59 +160,67 @@
 
   <section class="section">
     <h2>Warum HairSoft?</h2>
+    <p>Normale Handtücher schädigen dein Haar. HairSoft ist anders – weich, saugstark und perfekt für jeden Haartyp. Weniger Frizz. Weniger Haarbruch. Mehr Pflege.</p>
+
     <div class="features">
-      <div class="feature-box">
-        <strong>Ultra-weiche Mikrofaser</strong><br>
-        Sanft zu Locken, Glatthaar & Afro
+      <div class="feature">
+        <strong>Ultra-weiche Mikrofaser</strong>
+        <p>Sanft zu Locken, Glatthaar & Afro</p>
       </div>
-      <div class="feature-box">
-        <strong>Kein Haarbruch</strong><br>
-        Glatte Struktur schützt die Haarfaser
+      <div class="feature">
+        <strong>Kein Haarbruch</strong>
+        <p>Glatte Struktur schützt die Haarfaser</p>
       </div>
-      <div class="feature-box">
-        <strong>Schnelltrocknend</strong><br>
-        Leicht & effizient – ideal für den Alltag
+      <div class="feature">
+        <strong>Schnelltrocknend</strong>
+        <p>Leicht & effizient – ideal für den Alltag</p>
       </div>
-      <div class="feature-box">
-        <strong>Mit Stil</strong><br>
-        Modernes Design mit Knopf – fixierbar als Turban
+      <div class="feature">
+        <strong>Mit Stil</strong>
+        <p>Modernes Design in Wolkenform mit Knopf – fixierbar als Turban</p>
       </div>
     </div>
-  </section>
 
-  <section class="section preorder-box">
-    <p><strong>Nur jetzt: Vorbestellung für 14,99 €</strong> <span style="font-size: 0.9em">(statt 19,99 €)</span></p>
-    <p>Damit wir HairSoft produzieren können, brauchen wir mindestens <strong>500 Vorbestellungen</strong>. Du sicherst dir nicht nur ein Exemplar, sondern ermöglichst die gesamte Produktion!</p>
-
-    <p class="highlight">🚀 Aktueller Stand: 117 von 500 Vorbestellungen</p>
-    <div class="progress-bar-container">
-      <div class="progress-bar-fill"></div>
+    <div class="highlight">
+      <p><strong>JETZT zum Sonderpreis vorbestellen:</strong> Nur <strong>14,99 €</strong> (statt später 19,99 €)</p>
+      <p>Damit wir HairSoft produzieren können, brauchen wir mindestens <strong>500 Vorbestellungen</strong>. Du sicherst dir nicht nur dein Exemplar, sondern ermöglichst die Produktion!</p>
+      <p class="counter">🚀 Aktueller Stand: <strong>117 von 500</strong> Vorbestellungen</p>
+      <p><strong>Schlag jetzt zu!</strong> Das Angebot gilt nur bis Produktionsstart.</p>
     </div>
-
-    <p><em>Jetzt zugreifen – dieses Angebot ist nur für kurze Zeit!</em></p>
 
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-      <!-- PayPal settings -->
+      <!-- PayPal-Konfiguration -->
       <input type="hidden" name="cmd" value="_xclick">
-      <input type="hidden" name="business" value="DEINE_PAYPAL_MAIL@example.com">
+      <input type="hidden" name="business" value="DEINE_PAYPAL_EMAIL">
       <input type="hidden" name="item_name" value="HairSoft Handtuch – Vorbestellung">
       <input type="hidden" name="amount" value="14.99">
       <input type="hidden" name="currency_code" value="EUR">
-      <input type="hidden" name="return" value="https://deine-seite.github.io/success.html">
 
-      <!-- Kundendaten -->
+      <!-- Adressdaten -->
       <input type="text" name="first_name" placeholder="Vorname" required>
       <input type="text" name="last_name" placeholder="Nachname" required>
       <input type="email" name="email" placeholder="E-Mail-Adresse" required>
       <input type="text" name="address1" placeholder="Straße & Hausnummer" required>
-      <input type="text" name="zip" placeholder="PLZ" required>
+      <input type="text" name="zip" placeholder="Postleitzahl" required>
       <input type="text" name="city" placeholder="Ort" required>
       <input type="text" name="country" placeholder="Land" required>
 
-      <button type="submit">Jetzt vorbestellen mit PayPal</button>
-      <p class="paypal-note">Die Zahlung erfolgt sicher über PayPal.</p>
+      <div class="checkbox-wrapper">
+        <input type="checkbox" required>
+        <label>Ich stimme der Datenverarbeitung zum Versand zu</label>
+      </div>
+
+      <button type="submit">💜 Jetzt vorbestellen mit PayPal</button>
+
+      <div class="payment-note">
+        <strong>Wichtig:</strong> Deine Vorbestellung wird sofort bezahlt. Dadurch hilfst du uns, die Produktion zu starten. Falls das Ziel von 500 Stück nicht erreicht wird, bekommst du dein Geld vollständig zurück – garantiert!
+      </div>
     </form>
   </section>
+
+  <footer>
+    &copy; 2025 HairSoft – Alle Rechte vorbehalten
+  </footer>
 
 </body>
 </html>
