@@ -3,186 +3,142 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HairSoft – Vorbestellung</title>
+  <title>HairSoft – Vorbestellen</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background-color: #f5f0fa;
+      font-family: 'Nunito', sans-serif;
+      background: #fff5fc;
       color: #333;
     }
 
     header {
+      background: linear-gradient(90deg, #b478f1, #ff7eb9);
+      color: white;
+      padding: 60px 20px 40px;
       text-align: center;
-      padding: 40px 20px 20px;
-      background: linear-gradient(135deg, #d4b4f4, #f0e6ff);
     }
 
     header img {
-      width: 120px;
-      height: 120px;
-      object-fit: contain;
-      border-radius: 50%;
-      background-color: #fff;
-      padding: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-height: 60px;
+      margin-bottom: 20px;
     }
 
     h1 {
-      font-size: 30px;
-      margin: 20px 0 10px;
-      color: #6f2dbd;
+      font-size: 2.5em;
+      margin: 0;
+      font-weight: 800;
     }
 
-    p.intro {
-      max-width: 700px;
-      margin: 0 auto 30px;
-      font-size: 18px;
-      color: #444;
+    p.subtitle {
+      font-size: 1.2em;
+      margin-top: 10px;
     }
 
-    .vorteile {
+    main {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section h2 {
+      color: #9c4ef8;
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+
+    .features {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
       gap: 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 20px;
+      margin: 30px 0;
     }
 
-    .vorteil {
-      background-color: white;
+    .feature-box {
+      background: #ffeaf5;
+      border-left: 5px solid #ff4ecb;
+      border-radius: 12px;
+      box-shadow: 0 8px 15px rgba(255, 103, 177, 0.2);
       padding: 20px;
-      border-radius: 10px;
-      width: 280px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      border-left: 5px solid #b16dff;
+      flex: 1 1 calc(50% - 20px);
+      min-width: 250px;
     }
 
-    .counter {
-      text-align: center;
-      font-size: 20px;
-      margin-top: 30px;
-      font-weight: bold;
+    .feature-box h3 {
+      margin-top: 0;
+      color: #333;
+      font-weight: 700;
+    }
+
+    .preorder-box {
+      border: 2px dashed #c77dff;
+      border-radius: 16px;
+      padding: 30px;
+      background: white;
+      margin-top: 40px;
+    }
+
+    .preorder-box strong {
+      font-weight: 700;
     }
 
     .highlight {
-      background-color: #f8e8ff;
-      border-left: 6px solid #b16dff;
-      padding: 20px;
-      max-width: 700px;
-      margin: 40px auto;
-      border-radius: 8px;
-      color: #5b1d91;
+      color: #a23bff;
+      font-size: 1.2em;
+      font-weight: 800;
     }
 
-    form {
-      max-width: 600px;
-      margin: 40px auto;
-      padding: 25px;
-      background-color: white;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      border-radius: 12px;
+    .rocket {
+      margin-right: 6px;
     }
 
-    form label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
+    @media (max-width: 600px) {
+      .features {
+        flex-direction: column;
+      }
     }
-
-    form input {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-
-    .paypal-button {
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    .paypal-button button {
-      background-color: #b16dff;
-      border: none;
-      padding: 15px 30px;
-      font-size: 18px;
-      border-radius: 8px;
-      cursor: pointer;
-      color: white;
-    }
-
-    .paypal-button button:hover {
-      background-color: #a259e8;
-    }
-
-    footer {
-      background-color: #6f2dbd;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 60px;
-    }
-
   </style>
 </head>
 <body>
-
   <header>
     <img src="hair-soft-logo.png" alt="HairSoft Logo">
-    <h1>HairSoft – Das haarschonende Handtuch</h1>
-    <p class="intro">Sanft. Saugstark. Stylisch. Jetzt vorbestellen für nur <strong>14,99 €</strong> – nur für kurze Zeit!</p>
+    <h1>HairSoft</h1>
+    <p class="subtitle">Das Handtuch, das deine Haare liebt – extrweich & wunderschön</p>
   </header>
 
-  <section class="vorteile">
-    <div class="vorteil">🌟 Besonders weich & haarschonend</div>
-    <div class="vorteil">🌿 Für alle Haartypen geeignet</div>
-    <div class="vorteil">💧 Saugstark & schnell trocknend</div>
-  </section>
+  <main>
+    <section>
+      <h2>Warum HairSoft?</h2>
+      <p>Normale Handtücher schädigen dein Haar. HairSoft ist anders – weich, saugstark und perfekt für jeden Haartyp. Weniger Frizz. Weniger Haarbruch. Mehr Pflege.</p>
 
-  <div class="counter">
-    🎉 Bereits <span id="counter">76</span> Vorbestellungen
-  </div>
+      <div class="features">
+        <div class="feature-box">
+          <h3>Ultra-weiche Mikrofaser</h3>
+          <p>Sanft zu Locken, Glatthaar & Afro</p>
+        </div>
+        <div class="feature-box">
+          <h3>Kein Haarbruch</h3>
+          <p>Glatte Struktur schützt die Haarfaser</p>
+        </div>
+        <div class="feature-box">
+          <h3>Schnelltrocknend</h3>
+          <p>Leicht & effizient – ideal für den Alltag</p>
+        </div>
+        <div class="feature-box">
+          <h3>Mit Stil</h3>
+          <p>Modernes Design mit Knopf – fixierbar als Turban</p>
+        </div>
+      </div>
+    </section>
 
-  <div class="highlight">
-    <strong>Hinweis:</strong> Wir starten die Produktion ab 500 Vorbestellungen. Wird das Ziel nicht erreicht, bekommst du dein Geld vollständig zurück.
-  </div>
-
-  <form>
-    <h2 style="text-align:center; color:#6f2dbd;">Jetzt vorbestellen</h2>
-
-    <label for="vorname">Vorname*</label>
-    <input type="text" id="vorname" name="vorname" required>
-
-    <label for="nachname">Nachname*</label>
-    <input type="text" id="nachname" name="nachname" required>
-
-    <label for="email">E-Mail*</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="adresse">Straße & Hausnummer*</label>
-    <input type="text" id="adresse" name="adresse" required>
-
-    <label for="plz">PLZ*</label>
-    <input type="text" id="plz" name="plz" required>
-
-    <label for="ort">Ort*</label>
-    <input type="text" id="ort" name="ort" required>
-
-    <div class="paypal-button">
-      <button onclick="window.location.href='https://www.paypal.com/paypalme/DEINBENUTZERNAME/14.99'; return false;">
-        Für 14,99 € mit PayPal vorbestellen
-      </button>
-      <p style="font-size: 14px; color: gray; margin-top: 10px;">Später kostet das Handtuch 19,99 €</p>
-    </div>
-  </form>
-
-  <footer>
-    &copy; 2025 HairSoft – Für gesundes und glückliches Haar
-  </footer>
-
+    <section class="preorder-box">
+      <p><strong>Nur jetzt: Vorbestellung für 14,99 €</strong> <span style="font-size: 0.9em">(statt 19,99 €)</span></p>
+      <p>Damit wir HairSoft produzieren können, brauchen wir mindestens <strong>500 Vorbestellungen</strong>. Du sicherst dir nicht nur ein Exemplar, sondern ermöglichst die gesamte Produktion!</p>
+      <p class="highlight"><span class="rocket">🚀</span> Aktueller Stand: <strong>117 von 500 Vorbestellungen</strong></p>
+      <p><em>Jetzt zugreifen – dieses Angebot ist nur für kurze Zeit!</em></p>
+    </section>
+  </main>
 </body>
 </html>
+
