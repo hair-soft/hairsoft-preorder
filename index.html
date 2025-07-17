@@ -106,7 +106,7 @@
       font-size: 1rem;
     }
 
-    button {
+    button, .stripe-button {
       padding: 0.75rem 1.5rem;
       background: linear-gradient(90deg, #a55cff, #ff65b1);
       color: white;
@@ -115,9 +115,11 @@
       font-size: 1.1rem;
       cursor: pointer;
       transition: transform 0.2s, background-color 0.3s;
+      text-decoration: none;
+      display: inline-block;
     }
 
-    button:hover {
+    button:hover, .stripe-button:hover {
       transform: scale(1.05);
     }
 
@@ -131,17 +133,16 @@
       border-left: 6px solid #ffaf43;
     }
 
-    .or-divider {
-      margin: 1rem 0;
-      font-weight: bold;
-      color: #888;
-    }
-
     footer {
       text-align: center;
       padding: 2rem;
       background-color: #fdf6ff;
       color: #8a4ded;
+    }
+
+    .alternative-payment {
+      margin-top: 1.5rem;
+      text-align: center;
     }
   </style>
 </head>
@@ -187,9 +188,10 @@
       <p>Damit wir HairSoft produzieren können, brauchen wir mindestens <strong>500 Vorbestellungen</strong>. Du sicherst dir nicht nur dein Exemplar, sondern ermöglichst die gesamte Produktion!</p>
       <p class="counter">🚀 Aktueller Stand: <strong>67 von 500</strong> Vorbestellungen</p>
       <p><strong>Dein Beitrag zählt – jetzt verbindlich vorbestellen & mitmachen.</strong></p>
-      <p style="margin-top: 1rem;"><strong>Wichtig:</strong> Deine Vorbestellung wird sofort bezahlt. Falls das Ziel nicht erreicht wird, bekommst du dein Geld vollständig zurück – garantiert!</p>
+      <p style="margin-top: 1rem;"><strong>Wichtig:</strong> Deine Vorbestellung wird sofort bezahlt. Falls das Ziel von 500 Stück nicht erreicht wird, bekommst du dein Geld vollständig zurück – garantiert!</p>
     </div>
 
+    <!-- PayPal -->
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
       <input type="hidden" name="cmd" value="_xclick">
       <input type="hidden" name="business" value="antonellohairsoft@gmail.com">
@@ -207,27 +209,11 @@
       <button type="submit">🧡 Jetzt mit PayPal vorbestellen (14,99 €)</button>
     </form>
 
-    <div class="or-divider">oder</div>
-
-    <a href="https://buy.stripe.com/00w28q2ZB4GI08Y84U" target="_blank">
-      <button style="
-          background-color: #f85db3;
-          color: white;
-          border: none;
-          padding: 12px 24px;
-          border-radius: 8px;
-          font-size: 16px;
-          font-weight: bold;
-          cursor: pointer;
-          width: 100%;
-          max-width: 400px;
-          margin: 0 auto;
-          display: block;
-          box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        ">
-        💳 Jetzt mit Karte (Stripe) vorbestellen (14,99 €)
-      </button>
-    </a>
+    <!-- Stripe -->
+    <div class="alternative-payment">
+      <p>Oder lieber mit Stripe zahlen?</p>
+      <a class="stripe-button" href="https://buy.stripe.com/00w28q2ZB4GI08Y84U" target="_blank">💳 Mit Stripe vorbestellen (14,99 €)</a>
+    </div>
 
     <div class="payment-note">
       <strong>Hinweis:</strong> Du zahlst jetzt 14,99 € für die Vorbestellung. Wenn das Produkt später regulär verkauft wird, kostet es 19,99 €. Jetzt zugreifen & sparen!
@@ -240,3 +226,4 @@
 
 </body>
 </html>
+
