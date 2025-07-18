@@ -6,6 +6,7 @@
   <title>HairSoft – Dein haarschonendes Handtuch</title>
   <link rel="icon" type="image/png" href="favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <script defer data-domain="hair-soft.github.io/hairsoft-preorder" src="https://plausible.io/js/script.js"></script>
   <style>
     body {
       font-family: 'Quicksand', sans-serif;
@@ -106,7 +107,7 @@
       font-size: 1rem;
     }
 
-    button, .stripe-button {
+    button {
       padding: 0.75rem 1.5rem;
       background: linear-gradient(90deg, #a55cff, #ff65b1);
       color: white;
@@ -115,11 +116,9 @@
       font-size: 1.1rem;
       cursor: pointer;
       transition: transform 0.2s, background-color 0.3s;
-      text-decoration: none;
-      display: inline-block;
     }
 
-    button:hover, .stripe-button:hover {
+    button:hover {
       transform: scale(1.05);
     }
 
@@ -140,9 +139,16 @@
       color: #8a4ded;
     }
 
-    .alternative-payment {
-      margin-top: 1.5rem;
-      text-align: center;
+    .legal {
+      font-size: 0.85rem;
+      color: #777;
+      margin-top: 2rem;
+      text-align: left;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #f8f8f8;
+      border-radius: 0.5rem;
     }
   </style>
 </head>
@@ -176,7 +182,7 @@
       </div>
       <div class="feature">
         <strong>Mit Stil</strong>
-        <p>Modernes Design in Wolkenform – auch als Turban tragbar</p>
+        <p>Modernes Design in Wolkenform – tragbar auch als Turban</p>
       </div>
     </div>
   </section>
@@ -191,7 +197,12 @@
       <p style="margin-top: 1rem;"><strong>Wichtig:</strong> Deine Vorbestellung wird sofort bezahlt. Falls das Ziel von 500 Stück nicht erreicht wird, bekommst du dein Geld vollständig zurück – garantiert!</p>
     </div>
 
-    <!-- PayPal -->
+    <form action="https://buy.stripe.com/00w28q2ZB4GI08Y84U" method="GET">
+      <button type="submit">💳 Jetzt mit Karte zahlen (Stripe – 14,99 €)</button>
+    </form>
+
+    <p style="margin: 1rem 0; text-align: center;">oder</p>
+
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
       <input type="hidden" name="cmd" value="_xclick">
       <input type="hidden" name="business" value="antonellohairsoft@gmail.com">
@@ -209,16 +220,20 @@
       <button type="submit">🧡 Jetzt mit PayPal vorbestellen (14,99 €)</button>
     </form>
 
-    <!-- Stripe -->
-    <div class="alternative-payment">
-      <p>Oder lieber mit Stripe zahlen?</p>
-      <a class="stripe-button" href="https://buy.stripe.com/6oUaEW2ZBehibRGdpe3Je01" target="_blank">💳 Mit Stripe vorbestellen (14,99 €)</a>
-    </div>
-
     <div class="payment-note">
       <strong>Hinweis:</strong> Du zahlst jetzt 14,99 € für die Vorbestellung. Wenn das Produkt später regulär verkauft wird, kostet es 19,99 €. Jetzt zugreifen & sparen!
     </div>
   </section>
+
+  <div class="legal">
+    <h3>Impressum</h3>
+    <p><strong>Verantwortlich:</strong> Antonello [Nachname]<br>
+    Musterstraße 1, 12345 Musterstadt<br>
+    E-Mail: antonellohairsoft@gmail.com</p>
+
+    <h3>Datenschutz</h3>
+    <p>Wir verarbeiten deine Daten ausschließlich zur Abwicklung deiner Bestellung. Deine Daten werden nicht an Dritte weitergegeben. Für weitere Informationen kontaktiere uns bitte per E-Mail.</p>
+  </div>
 
   <footer>
     &copy; 2025 HairSoft – Alle Rechte vorbehalten
@@ -226,4 +241,3 @@
 
 </body>
 </html>
-
