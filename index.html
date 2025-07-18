@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HairSoft – Dein haarschonendes Handtuch</title>
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
-  <script defer data-domain="hair-soft.github.io/hairsoft-preorder" src="https://plausible.io/js/script.js"></script>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Plausible Analytics -->
+  <script defer data-domain="hair-soft.github.io/hairsoft-preorder" src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"></script>
+  <script>
+    window.plausible = window.plausible || function () {
+      (window.plausible.q = window.plausible.q || []).push(arguments);
+    };
+  </script>
+
   <style>
     body {
       font-family: 'Quicksand', sans-serif;
@@ -132,30 +140,22 @@
       border-left: 6px solid #ffaf43;
     }
 
+    .stripe-button-container {
+      margin-top: 1.5rem;
+    }
+
     footer {
       text-align: center;
       padding: 2rem;
       background-color: #fdf6ff;
       color: #8a4ded;
     }
-
-    .legal {
-      font-size: 0.85rem;
-      color: #777;
-      margin-top: 2rem;
-      text-align: left;
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
-      background: #f8f8f8;
-      border-radius: 0.5rem;
-    }
   </style>
 </head>
-<body>
 
+<body>
   <div class="banner">
-    <img src="hair-soft-logo.png" alt="HairSoft Logo">
+    <img src="hair-soft-logo.png" alt="HairSoft Logo" />
   </div>
 
   <header>
@@ -182,7 +182,7 @@
       </div>
       <div class="feature">
         <strong>Mit Stil</strong>
-        <p>Modernes Design in Wolkenform – tragbar auch als Turban</p>
+        <p>Modernes Design in Wolkenform – auch als Turban tragbar</p>
       </div>
     </div>
   </section>
@@ -197,47 +197,39 @@
       <p style="margin-top: 1rem;"><strong>Wichtig:</strong> Deine Vorbestellung wird sofort bezahlt. Falls das Ziel von 500 Stück nicht erreicht wird, bekommst du dein Geld vollständig zurück – garantiert!</p>
     </div>
 
-    <form action="https://buy.stripe.com/00w28q2ZB4GI08Y84U" method="GET">
-      <button type="submit">💳 Jetzt mit Karte zahlen (Stripe – 14,99 €)</button>
-    </form>
-
-    <p style="margin: 1rem 0; text-align: center;">oder</p>
-
+    <!-- PayPal-Button -->
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-      <input type="hidden" name="cmd" value="_xclick">
-      <input type="hidden" name="business" value="antonellohairsoft@gmail.com">
-      <input type="hidden" name="item_name" value="HairSoft Vorbestellung">
-      <input type="hidden" name="amount" value="14.99">
-      <input type="hidden" name="currency_code" value="EUR">
+      <input type="hidden" name="cmd" value="_xclick" />
+      <input type="hidden" name="business" value="antonellohairsoft@gmail.com" />
+      <input type="hidden" name="item_name" value="HairSoft Vorbestellung" />
+      <input type="hidden" name="amount" value="14.99" />
+      <input type="hidden" name="currency_code" value="EUR" />
 
-      <input type="text" name="first_name" placeholder="Vorname" required>
-      <input type="text" name="last_name" placeholder="Nachname" required>
-      <input type="text" name="address1" placeholder="Straße & Hausnummer" required>
-      <input type="text" name="zip" placeholder="PLZ" required>
-      <input type="text" name="city" placeholder="Ort" required>
-      <input type="email" name="email" placeholder="E-Mail" required>
+      <input type="text" name="first_name" placeholder="Vorname" required />
+      <input type="text" name="last_name" placeholder="Nachname" required />
+      <input type="text" name="address1" placeholder="Straße & Hausnummer" required />
+      <input type="text" name="zip" placeholder="PLZ" required />
+      <input type="text" name="city" placeholder="Ort" required />
+      <input type="email" name="email" placeholder="E-Mail" required />
 
-      <button type="submit">🧡 Jetzt mit PayPal vorbestellen (14,99 €)</button>
+      <button type="submit" onclick="plausible('PayPal Bestellt')">🧡 Jetzt mit PayPal vorbestellen (14,99 €)</button>
     </form>
+
+    <!-- Stripe Button -->
+    <div class="stripe-button-container">
+      <form action="https://buy.stripe.com/00w28q2ZB4GI08Y84U" method="GET" target="_blank">
+        <button type="submit" onclick="plausible('Stripe Bestellt')">💳 Oder mit Karte via Stripe zahlen</button>
+      </form>
+    </div>
 
     <div class="payment-note">
       <strong>Hinweis:</strong> Du zahlst jetzt 14,99 € für die Vorbestellung. Wenn das Produkt später regulär verkauft wird, kostet es 19,99 €. Jetzt zugreifen & sparen!
     </div>
   </section>
 
-  <div class="legal">
-    <h3>Impressum</h3>
-    <p><strong>Verantwortlich:</strong> Antonello [Nachname]<br>
-    Musterstraße 1, 12345 Musterstadt<br>
-    E-Mail: antonellohairsoft@gmail.com</p>
-
-    <h3>Datenschutz</h3>
-    <p>Wir verarbeiten deine Daten ausschließlich zur Abwicklung deiner Bestellung. Deine Daten werden nicht an Dritte weitergegeben. Für weitere Informationen kontaktiere uns bitte per E-Mail.</p>
-  </div>
-
   <footer>
     &copy; 2025 HairSoft – Alle Rechte vorbehalten
   </footer>
-
 </body>
 </html>
+
