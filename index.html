@@ -126,6 +126,11 @@
       background-color: #fdf6ff;
       color: #8a4ded;
     }
+    .versand {
+      color: green;
+      font-weight: bold;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
@@ -173,6 +178,7 @@
       <p style="margin-top: 1rem;"><strong>Wichtig:</strong> Deine Vorbestellung wird sofort bezahlt. Falls das Ziel von 500 Stück nicht erreicht wird, bekommst du dein Geld vollständig zurück – garantiert!</p>
     </div>
 
+    <!-- PayPal Formular -->
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
       <input type="hidden" name="cmd" value="_xclick" />
       <input type="hidden" name="business" value="antonellohairsoft@gmail.com" />
@@ -188,12 +194,17 @@
       <input type="email" name="email" placeholder="E-Mail" required />
 
       <button type="submit">🧡 Jetzt mit PayPal vorbestellen (14,99 €)</button>
-
-      <!-- Gratis Versand Hinweis -->
-      <p style="margin-top: 10px; color: green; font-weight: bold;">
-        🚚 Kostenloser Versand innerhalb Deutschlands
-      </p>
     </form>
+
+    <!-- Stripe Button -->
+    <div style="text-align: center; margin-top: 1rem;">
+      <a href="https://buy.stripe.com/cNicN443Fa121d21Gw3Je02" target="_blank">
+        <button>💳 Alternativ mit Stripe bezahlen (14,99 €)</button>
+      </a>
+    </div>
+
+    <!-- Gratis Versand Hinweis -->
+    <p class="versand">🚚 Kostenloser Versand innerhalb Deutschlands</p>
 
     <div class="payment-note">
       <strong>Hinweis:</strong> Du zahlst jetzt 14,99 € für die Vorbestellung. Wenn das Produkt später regulär verkauft wird, kostet es 19,99 €. Jetzt zugreifen & sparen!
@@ -203,6 +214,7 @@
   <footer>
     &copy; 2025 HairSoft – Alle Rechte vorbehalten
   </footer>
+
 </body>
 </html>
 
