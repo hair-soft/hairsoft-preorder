@@ -2,13 +2,13 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HairSoft – Dein haarschonendes Handtuch</title>
   <link rel="icon" type="image/png" href="favicon.png" />
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
   <script defer data-domain="hair-soft.github.io/hairsoft-preorder" src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"></script>
   <script>
-    window.plausible = window.plausible || function() {
+    window.plausible = window.plausible || function () {
       (window.plausible.q = window.plausible.q || []).push(arguments);
     };
   </script>
@@ -131,7 +131,7 @@
 <body>
 
   <div class="banner">
-    <img src="hair-soft-logo.png" alt="HairSoft Logo">
+    <img src="hair-soft-logo.png" alt="HairSoft Logo" />
   </div>
 
   <header>
@@ -173,7 +173,6 @@
       <p style="margin-top: 1rem;"><strong>Wichtig:</strong> Deine Vorbestellung wird sofort bezahlt. Falls das Ziel von 500 Stück nicht erreicht wird, bekommst du dein Geld vollständig zurück – garantiert!</p>
     </div>
 
-    <!-- PayPal Formular -->
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
       <input type="hidden" name="cmd" value="_xclick" />
       <input type="hidden" name="business" value="antonellohairsoft@gmail.com" />
@@ -188,12 +187,12 @@
       <input type="text" name="city" placeholder="Ort" required />
       <input type="email" name="email" placeholder="E-Mail" required />
 
-      <button type="submit" onclick="plausible('PayPal Bestellt')">🧡 Jetzt mit PayPal vorbestellen (14,99 €)</button>
-    </form>
+      <button type="submit">🧡 Jetzt mit PayPal vorbestellen (14,99 €)</button>
 
-    <!-- Stripe Button -->
-    <form action="https://buy.stripe.com/cNicN443Fa121d21Gw3Je02" method="GET" target="_blank">
-      <button type="submit" onclick="plausible('Stripe Bestellt')">💳 Oder mit Karte via Stripe zahlen</button>
+      <!-- Gratis Versand Hinweis -->
+      <p style="margin-top: 10px; color: green; font-weight: bold;">
+        🚚 Kostenloser Versand innerhalb Deutschlands
+      </p>
     </form>
 
     <div class="payment-note">
@@ -204,7 +203,6 @@
   <footer>
     &copy; 2025 HairSoft – Alle Rechte vorbehalten
   </footer>
-
 </body>
 </html>
 
