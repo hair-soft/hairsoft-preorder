@@ -178,23 +178,14 @@
       <p style="margin-top: 1rem;"><strong>Wichtig:</strong> Deine Vorbestellung wird sofort bezahlt. Falls das Ziel von 500 Stück nicht erreicht wird, bekommst du dein Geld vollständig zurück – garantiert!</p>
     </div>
 
-    <!-- PayPal Formular -->
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-      <input type="hidden" name="cmd" value="_xclick" />
-      <input type="hidden" name="business" value="antonellohairsoft@gmail.com" />
-      <input type="hidden" name="item_name" value="HairSoft Vorbestellung" />
-      <input type="hidden" name="amount" value="14.99" />
-      <input type="hidden" name="currency_code" value="EUR" />
-
-      <input type="text" name="first_name" placeholder="Vorname" required />
-      <input type="text" name="last_name" placeholder="Nachname" required />
-      <input type="text" name="address1" placeholder="Straße & Hausnummer" required />
-      <input type="text" name="zip" placeholder="PLZ" required />
-      <input type="text" name="city" placeholder="Ort" required />
-      <input type="email" name="email" placeholder="E-Mail" required />
-
-      <button type="submit">🧡 Jetzt mit PayPal vorbestellen (14,99 €)</button>
-    </form>
+    <!-- PayPal Button -->
+<div style="text-align: center; margin-top: 1rem;">
+  <a href="https://www.paypal.com/ncp/payment/XPZPG34YJ9H9N" target="_blank">
+    <button style="background:#ffc439; color:#111; border:none; padding:12px 24px; font-size:16px; border-radius:8px; cursor:pointer;">
+      💛 Mit PayPal vorbestellen (14,99 €)
+    </button>
+  </a>
+</div>
 
     <!-- Stripe Button -->
     <div style="text-align: center; margin-top: 1rem;">
@@ -217,3 +208,4 @@
 
 </body>
 </html>
+
