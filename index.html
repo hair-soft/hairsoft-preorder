@@ -3,45 +3,241 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HairSoft • Wolkenweiches Haartuch</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>HairSoft – Dein haarschonendes Handtuch</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap');
-    body { font-family: 'Inter', sans-serif; }
-    .heading { font-family: 'Playfair Display', sans-serif; }
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom, #fdf6ff, #ffffff);
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Logo Banner */
+    .banner {
+      width: 100%;
+      padding: 1rem 0;
+      background-color: #fff;
+      text-align: center;
+    }
+    .banner img {
+      max-height: 90px;
+      width: auto;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      background: linear-gradient(135deg, #b58dff, #ff92c2);
+      color: white;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.3rem;
+    }
+    header p {
+      font-size: 1.3rem;
+    }
+
+    /* Section */
+    .section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* Features Grid */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .feature {
+      background: #ffe4f1;
+      border-left: 6px solid #ff65b1;
+      padding: 1rem;
+      border-radius: 1rem;
+      box-shadow: 0 6px 10px rgba(0,0,0,0.05);
+      min-height: 140px;
+    }
+    .feature i {
+      font-size: 1.8rem;
+      color: #ff65b1;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Highlight */
+    .highlight {
+      background-color: #fff0fa;
+      padding: 2rem;
+      border-radius: 1rem;
+      border: 2px dashed #dba8ff;
+      box-shadow: 0 3px 12px rgba(139,92,246,0.15);
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .counter {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #8a4ded;
+      margin: 1rem 0;
+    }
+
+    /* Buttons */
+    .pay-btn {
+      background: white;
+      border: 2px solid #8a4ded;
+      color: #8a4ded;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    .pay-btn:hover {
+      background: #8a4ded;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    /* Versandhinweis */
+    .free-shipping {
+      background:#fff8d6;
+      border-top:3px solid #ffcc00;
+      padding:1rem;
+      font-weight:bold;
+      color:#333;
+      text-align:center;
+      margin-top:2rem;
+    }
+
+    /* FAQ */
+    .faq-box {
+      background:#f5f1ff;
+      padding:1.5rem;
+      border-radius:1rem;
+      line-height:1.6;
+    }
+    .faq-box p {
+      margin-bottom:1rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align:center;
+      padding:2rem;
+      background-color:#fdf6ff;
+      color:#8a4ded;
+      margin-top:2rem;
+    }
+    footer a {
+      color:#8a4ded;
+      font-weight:bold;
+      margin:0 5px;
+    }
   </style>
 </head>
-<body class="bg-[#f9f4f8]">
 
-  <section class="min-h-screen bg-gradient-to-br from-purple-600 via-purple-500 to-purple-700 relative flex items-center text-white">
-    <div class="max-w-6xl mx-auto px-6 text-center z-10">
-      <h1 class="heading text-7xl md:text-8xl font-bold leading-none mb-8">Deine Haare<br>in <span class="text-purple-200">Wolkenweichheit</span></h1>
-      <p class="text-3xl mb-12">Das schönste Haartuch in lila-cremig</p>
-      <a href="#preorder" class="inline-block bg-white text-purple-950 font-bold text-2xl px-16 py-8 rounded-3xl hover:scale-110">JETZT FÜR 17,99 € VORBESTELLEN</a>
+<body>
+
+  <!-- Logo oben -->
+  <div class="banner">
+    <img src="hair-soft-logo.png" alt="HairSoft Logo">
+  </div>
+
+  <!-- Header -->
+  <header>
+    <h1>HairSoft</h1>
+    <p>Das Haartuch, das deine Haare liebt – extraweich & wunderschön</p>
+  </header>
+
+  <!-- Warum HairSoft -->
+  <section class="section">
+    <h2 style="color:#8a4ded; text-align:center;">Warum HairSoft?</h2>
+    <p style="text-align:center;">Normale Handtücher schädigen dein Haar. HairSoft ist anders – weich, saugstark und perfekt für jeden Haartyp.</p>
+
+    <div class="feature-grid">
+
+      <div class="feature">
+        <i class="fa-solid fa-cloud"></i>
+        <strong>Ultra-weiche Mikrofaser</strong>
+        <p>Sanft zu Locken, Glatthaar & Afro.</p>
+      </div>
+
+      <div class="feature">
+        <i class="fa-solid fa-shield-heart"></i>
+        <strong>Kein Haarbruch</strong>
+        <p>Glatte Fasern schützen die Haarstruktur.</p>
+      </div>
+
+      <div class="feature">
+        <i class="fa-solid fa-gauge-high"></i>
+        <strong>Schnelltrocknend</strong>
+        <p>Effizient & leicht – perfekt für jeden Tag.</p>
+      </div>
+
+      <div class="feature">
+        <i class="fa-solid fa-wind"></i>
+        <strong>Modernes Design</strong>
+        <p>Stylish als Turban tragbar.</p>
+      </div>
+
     </div>
-
-    <img src="images/hairsoft-cloud-hero.jpg" alt="Hero" class="absolute bottom-10 right-10 w-96 rounded-3xl shadow-2xl hidden lg:block">
   </section>
 
-  <section class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="grid md:grid-cols-3 gap-8">
-        <img src="images/hairsoft-on-fabric.png" alt="On fabric" class="rounded-3xl shadow-xl">
-        <img src="images/hairsoft-in-clouds.png" alt="In clouds" class="rounded-3xl shadow-xl">
-        <img src="images/hairsoft-cloud-hero.jpg" alt="Cloud hero" class="rounded-3xl shadow-xl">
+  <!-- Vorbestellung -->
+  <section class="section">
+    <h2 style="color:#8a4ded; text-align:center;">Jetzt für 17,99 € vorbestellen (statt 22,99 € später!)</h2>
+
+    <div class="highlight">
+      <p><strong>Wir brauchen deine Unterstützung!</strong></p>
+      <p>Damit wir HairSoft produzieren können, brauchen wir mindestens <strong>500-1000+</strong> Vorbestellungen.</p>
+
+      <p class="counter">🚀 Aktueller Stand: <strong>8 von 500-1000+</strong></p>
+
+      <p><strong>Deine Vorbestellung wird sofort bezahlt – bei Nichterreichen des Ziels bekommst du 100 % zurück!</strong></p>
+
+      <div class="free-shipping">🚚 Gratis Versand für alle Vorbestellungen!</div>
+
+      <div style="text-align:center; margin-top:2rem;">
+        <a href="https://buy.stripe.com/cNidR857J5KM3la2KA3Je03" target="_blank">
+          <button class="pay-btn">Jetzt HairSoft vorbestellen – 17,99 €</button>
+        </a>
       </div>
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section class="section">
+    <h2 style="text-align:center; color:#8a4ded;">❓ Häufige Fragen (FAQ)</h2>
+    <div class="faq-box">
+      <p><strong>Wann kommt mein HairSoft?</strong><br>30 Tage nach Produktionsstart, sobald 500+ Vorbestellungen erreicht sind.</p>
+      <p><strong>Versandkosten?</strong><br>0 € – komplett kostenlos.</p>
+      <p><strong>Was, wenn 500 Stück nicht erreicht werden?</strong><br>Du bekommst dein Geld zu 100 % zurück.</p>
+      <p><strong>Für wen geeignet?</strong><br>Für alle Haartypen – Locken, Glatthaar, Afro.</p>
+      <p><strong>Waschanleitung?</strong><br>Einfach bei 30–40 °C waschen.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 HairSoft – Alle Rechte vorbehalten<br>
+    <a href="impressum.html">Impressum</a> | 
+    <a href="datenschutz.html">Datenschutz</a> |
+    <a href="widerruf.html">Widerrufsrecht</a> |
+    <a href="agb.html">AGB</a>
+  </footer>
+
 </body>
 </html>
-
-
-
-
-
-
-
 
 
 
