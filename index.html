@@ -12,155 +12,151 @@
     .heading { font-family: 'Playfair Display', sans-serif; }
     
     .hero-bg {
-      background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)), url('https://picsum.photos/id/1015/2000/1200');
+      background-image: linear-gradient(rgba(120, 80, 160, 0.45), rgba(180, 140, 200, 0.5)), 
+                        url('https://picsum.photos/id/1018/2000/1200'); /* dreamy lilac clouds */
       background-size: cover;
       background-position: center;
     }
     
-    .product-float { animation: float 4s ease-in-out infinite; }
-    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-25px); } }
+    .product-float { animation: float 4.5s ease-in-out infinite; }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-30px); } }
     
-    .lilac-gradient { background: linear-gradient(135deg, #d8b4fe, #f3e8ff, #fdf4ff); }
+    .lilac-cream { background: linear-gradient(135deg, #f3e8ff, #fdf4ff, #e0d4f5); }
   </style>
 </head>
-<body class="bg-[#f8f1f7] text-zinc-900 overflow-x-hidden">
+<body class="bg-[#f9f4f8] text-zinc-900 overflow-x-hidden">
 
   <!-- HERO -->
   <section class="hero-bg min-h-screen flex items-center relative text-white">
     <div class="max-w-6xl mx-auto px-6 text-center z-10">
       <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-6 py-3 rounded-full mb-8 text-sm font-medium">
-        <span class="text-purple-300">✦</span> NEU • HAARSCHONENDES MIKROFASER-HAARTUCH
+        <span class="text-purple-200">✦</span> ULTRA-WEICHES MIKROFASER-HAARTUCH
       </div>
       
       <h1 class="heading text-6xl md:text-7xl font-bold mb-6 leading-tight">
-        Das Haartuch,<br>das deine Haare <span class="text-purple-300">liebt</span>
+        Deine Haare,<br>umhüllt in <span class="text-purple-200">Wolkenweichheit</span>
       </h1>
       
       <p class="text-2xl md:text-3xl max-w-2xl mx-auto mb-10 text-white/90">
-        Ultra-weich • Kein Haarbruch • Blitzschnell trocken • Wunderschönes Design
+        HairSoft – Das lila-cremige Haartuch, das Frizz, Haarbruch und Spliss sanft den Kampf ansagt.
       </p>
 
-      <div class="flex flex-col sm:flex-row gap-5 justify-center">
-        <a href="#preorder" class="bg-white text-purple-950 font-semibold text-xl px-10 py-6 rounded-3xl hover:scale-105 transition-all shadow-xl flex items-center gap-3">
-          JETZT FÜR 17,99 € VORBESTELLEN
-          <i class="fa-solid fa-arrow-right"></i>
-        </a>
-      </div>
+      <a href="#preorder" class="inline-block bg-white text-purple-950 font-semibold text-xl px-12 py-6 rounded-3xl hover:scale-105 transition-all shadow-2xl">
+        JETZT FÜR 17,99 € VORBESTELLEN
+      </a>
     </div>
 
     <!-- Floating Product -->
-    <div class="absolute bottom-12 right-8 lg:right-20 hidden lg:block">
+    <div class="absolute bottom-10 right-10 hidden xl:block">
       <img src="https://picsum.photos/id/1015/420/420" alt="HairSoft Haartuch" 
-           class="w-80 rounded-3xl shadow-2xl product-float border-8 border-white/30">
+           class="w-80 rounded-3xl shadow-2xl product-float border-8 border-white/40">
     </div>
   </section>
 
-  <!-- PRODUCT VISUALS -->
-  <section class="py-20 bg-white">
+  <!-- PRODUCT IN ACTION -->
+  <section class="py-20 lilac-cream">
     <div class="max-w-6xl mx-auto px-6">
-      <h2 class="heading text-5xl text-center mb-12">So sieht HairSoft aus</h2>
+      <h2 class="heading text-5xl text-center mb-12 text-purple-950">HairSoft in seiner ganzen Weichheit</h2>
       
       <div class="grid md:grid-cols-3 gap-8">
-        <!-- Bild 1 -->
-        <div class="group relative overflow-hidden rounded-3xl">
-          <img src="https://picsum.photos/id/1005/800/600" alt="Woman wearing HairSoft Turban" class="w-full h-full object-cover transition group-hover:scale-110">
-          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white">
-            <p class="font-medium">Als stylischer Turban</p>
+        <div class="group relative overflow-hidden rounded-3xl shadow-xl">
+          <img src="https://picsum.photos/id/1005/800/700" alt="Frau mit HairSoft Turban" class="w-full h-full object-cover transition group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-purple-950/60 to-transparent"></div>
+          <div class="absolute bottom-6 left-6 text-white">
+            <p class="font-medium text-lg">Stylischer Turban</p>
           </div>
         </div>
         
-        <!-- Bild 2 -->
-        <div class="group relative overflow-hidden rounded-3xl">
-          <img src="https://picsum.photos/id/201/800/600" alt="HairSoft Mikrofaser Detail" class="w-full h-full object-cover transition group-hover:scale-110">
-          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white">
-            <p class="font-medium">Ultra-weiche Mikrofaser</p>
+        <div class="group relative overflow-hidden rounded-3xl shadow-xl">
+          <img src="https://picsum.photos/id/133/800/700" alt="Weiches Mikrofaser Detail" class="w-full h-full object-cover transition group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-purple-950/60 to-transparent"></div>
+          <div class="absolute bottom-6 left-6 text-white">
+            <p class="font-medium text-lg">Butterweiche Textur</p>
           </div>
         </div>
         
-        <!-- Bild 3 -->
-        <div class="group relative overflow-hidden rounded-3xl">
-          <img src="https://picsum.photos/id/133/800/600" alt="Before After Hair" class="w-full h-full object-cover transition group-hover:scale-110">
-          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white">
-            <p class="font-medium">Weniger Frizz • Mehr Glanz</p>
+        <div class="group relative overflow-hidden rounded-3xl shadow-xl">
+          <img src="https://picsum.photos/id/201/800/700" alt="Ergebnis nach HairSoft" class="w-full h-full object-cover transition group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-purple-950/60 to-transparent"></div>
+          <div class="absolute bottom-6 left-6 text-white">
+            <p class="font-medium text-lg">Sanfte, glänzende Haare</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WHY SECTION -->
-  <section id="why" class="py-24 lilac-gradient">
+  <!-- BENEFITS -->
+  <section id="why" class="py-24 bg-white">
     <div class="max-w-6xl mx-auto px-6">
-      <h2 class="heading text-5xl text-center mb-16">Warum tausende Frauen auf HairSoft umsteigen</h2>
+      <h2 class="heading text-5xl text-center mb-16 text-purple-950">Warum HairSoft deine neue Liebe wird</h2>
       
       <div class="grid md:grid-cols-4 gap-8">
-        <div class="bg-white/70 backdrop-blur p-8 rounded-3xl text-center">
-          <div class="text-6xl mb-4">🌸</div>
-          <h3 class="text-2xl font-semibold mb-2">Butterweich</h3>
-          <p class="text-zinc-600">Sanfter als Seide – schont jedes Haar</p>
+        <div class="bg-[#f9f4f8] p-8 rounded-3xl text-center hover:shadow-xl transition">
+          <div class="text-6xl mb-4">☁️</div>
+          <h3 class="text-2xl font-semibold mb-2">Wolkenweich</h3>
+          <p class="text-zinc-600">Feinste Mikrofaser – sanfter als alles, was du bisher kanntest</p>
         </div>
-        <div class="bg-white/70 backdrop-blur p-8 rounded-3xl text-center">
+        <div class="bg-[#f9f4f8] p-8 rounded-3xl text-center hover:shadow-xl transition">
           <div class="text-6xl mb-4">🛡️</div>
-          <h3 class="text-2xl font-semibold mb-2">Kein Haarbruch</h3>
-          <p class="text-zinc-600">Reduziert Reibung massiv</p>
+          <h3 class="text-2xl font-semibold mb-2">Schützt dein Haar</h3>
+          <p class="text-zinc-600">Kaum Reibung = weniger Haarbruch & Frizz</p>
         </div>
-        <div class="bg-white/70 backdrop-blur p-8 rounded-3xl text-center">
+        <div class="bg-[#f9f4f8] p-8 rounded-3xl text-center hover:shadow-xl transition">
           <div class="text-6xl mb-4">⚡</div>
-          <h3 class="text-2xl font-semibold mb-2">50% schneller trocken</h3>
-          <p class="text-zinc-600">Super Saugkraft</p>
+          <h3 class="text-2xl font-semibold mb-2">Blitzschnell trocken</h3>
+          <p class="text-zinc-600">Absorbiert Feuchtigkeit in Rekordzeit</p>
         </div>
-        <div class="bg-white/70 backdrop-blur p-8 rounded-3xl text-center">
+        <div class="bg-[#f9f4f8] p-8 rounded-3xl text-center hover:shadow-xl transition">
           <div class="text-6xl mb-4">💜</div>
-          <h3 class="text-2xl font-semibold mb-2">Wunderschönes Lila-Design</h3>
-          <p class="text-zinc-600">Sieht im Bad einfach edel aus</p>
+          <h3 class="text-2xl font-semibold mb-2">Lila Traum</h3>
+          <p class="text-zinc-600">Wunderschönes cremig-lilanes Design</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PREORDER -->
-  <section id="preorder" class="py-24 bg-zinc-900 text-white">
+  <!-- MORE VISUALS -->
+  <section class="py-20 lilac-cream">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="heading text-5xl text-center mb-12 text-purple-950">HairSoft Momente</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <img src="https://picsum.photos/id/1027/600/600" alt="HairSoft Turban" class="rounded-3xl shadow-xl">
+        <img src="https://picsum.photos/id/106/600/600" alt="Woman with lilac hair towel" class="rounded-3xl shadow-xl">
+        <img src="https://picsum.photos/id/133/600/600" alt="Soft hair after drying" class="rounded-3xl shadow-xl">
+        <img src="https://picsum.photos/id/201/600/600" alt="Cloudy soft aesthetic" class="rounded-3xl shadow-xl">
+      </div>
+    </div>
+  </section>
+
+  <!-- PRE-ORDER -->
+  <section id="preorder" class="py-24 bg-gradient-to-br from-purple-950 to-purple-900 text-white">
     <div class="max-w-4xl mx-auto px-6 text-center">
-      <div class="bg-gradient-to-br from-purple-950 to-zinc-950 border border-purple-400/30 rounded-3xl p-12">
-        <p class="uppercase tracking-widest text-purple-400 text-sm mb-4">Launch Special</p>
-        <h2 class="heading text-6xl mb-6">Nur 17,99 € <span class="line-through text-3xl text-zinc-500">statt 22,99 €</span></h2>
+      <div class="bg-white/10 backdrop-blur-xl border border-white/30 rounded-3xl p-12">
+        <p class="uppercase tracking-widest text-purple-200 text-sm mb-4">Launch Special</p>
+        <h2 class="heading text-6xl mb-6">Nur 17,99 € <span class="line-through text-3xl opacity-60">statt 22,99 €</span></h2>
         
         <div class="my-10">
-          <div class="text-xl mb-3">Vorbestellungen: <span class="text-purple-400 font-bold">8 von 500</span></div>
-          <div class="h-3 bg-zinc-800 rounded-full">
-            <div class="h-full w-[2%] bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
+          <div class="text-xl mb-3">Vorbestellungen: <span class="text-purple-300 font-bold">8 von 500</span></div>
+          <div class="h-3 bg-white/20 rounded-full overflow-hidden">
+            <div class="h-full w-[2%] bg-gradient-to-r from-purple-300 to-pink-300 rounded-full"></div>
           </div>
         </div>
 
-        <a href="https://buy.stripe.com/cNidR857J5KM3la2KA3Je03" 
-           class="block w-full bg-white text-purple-950 font-bold text-2xl py-8 rounded-3xl hover:scale-105 transition-all">
-          JETZT SICHER VORBESTELLEN
+        <a href="#" class="block w-full bg-white text-purple-950 font-bold text-2xl py-8 rounded-3xl hover:scale-105 transition-all">
+          JETZT VORBESTELLEN
         </a>
-        <p class="text-purple-300 mt-6">100% Geld-zurück-Garantie • Gratis Versand</p>
+        <p class="text-purple-200 mt-6">100% Zufriedenheitsgarantie • Gratis Versand</p>
       </div>
     </div>
   </section>
 
-  <!-- MORE PRODUCT SHOTS -->
-  <section class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="heading text-5xl text-center mb-12">HairSoft in Aktion</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <img src="https://picsum.photos/id/1009/600/600" alt="HairSoft Turban" class="rounded-3xl shadow-lg">
-        <img src="https://picsum.photos/id/1011/600/600" alt="HairSoft on wet hair" class="rounded-3xl shadow-lg">
-        <img src="https://picsum.photos/id/1027/600/600" alt="Soft microfiber closeup" class="rounded-3xl shadow-lg">
-        <img src="https://picsum.photos/id/106/600/600" alt="Beautiful hair result" class="rounded-3xl shadow-lg">
-      </div>
-    </div>
-  </section>
-
-  <footer class="bg-zinc-900 text-white py-12 text-center">
-    <p class="text-purple-300">© 2026 HairSoft • Deine Haare verdienen das Beste</p>
+  <footer class="bg-[#f9f4f8] py-12 text-center text-purple-950/70">
+    <p>© 2026 HairSoft • Deine Haare in Wolkenweichheit gehüllt</p>
   </footer>
 
 </body>
 </html>
-
 
 
 
