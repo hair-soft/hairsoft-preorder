@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" class="scroll-smooth">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,136 +8,65 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap');
-    body { font-family: 'Inter', system-ui, sans-serif; }
+    body { font-family: 'Inter', sans-serif; }
     .heading { font-family: 'Playfair Display', sans-serif; }
-    
-    .hero-bg {
-      background-image: linear-gradient(rgba(140, 100, 180, 0.55), rgba(200, 160, 220, 0.5)), 
-                        url('https://picsum.photos/id/1018/2000/1400');
-      background-size: cover;
-      background-position: center;
-    }
-    
-    .cloud-float { animation: cloudFloat 6s ease-in-out infinite; }
-    @keyframes cloudFloat { 
-      0%, 100% { transform: translateY(0) rotate(0deg); } 
-      50% { transform: translateY(-35px) rotate(2deg); } 
-    }
-    
-    .glow { box-shadow: 0 0 40px rgba(192, 132, 252, 0.5); }
+    .product-img { transition: all 0.6s ease; }
+    .product-img:hover { transform: scale(1.05); box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25); }
   </style>
 </head>
-<body class="bg-[#f9f4f8] text-zinc-900 overflow-x-hidden">
+<body class="bg-[#f9f4f8]">
 
   <!-- HERO -->
-  <section class="hero-bg min-h-screen flex items-center relative text-white">
+  <section class="min-h-screen bg-gradient-to-br from-purple-600 via-purple-500 to-purple-700 relative flex items-center text-white overflow-hidden">
     <div class="max-w-6xl mx-auto px-6 text-center z-10">
-      <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-8 py-3 rounded-full mb-8 text-sm font-medium tracking-wide">
-        <span class="text-purple-200">☁️</span> WOLKENWEICH • HAARSCHONEND • LILA TRAUM
-      </div>
-      
-      <h1 class="heading text-6xl md:text-8xl font-bold mb-6 leading-none tracking-tighter">
-        Deine Haare<br>in <span class="text-purple-200">Wolkenweichheit</span>
-      </h1>
-      
-      <p class="text-2xl md:text-3xl max-w-2xl mx-auto mb-12 text-white/90">
-        Das ultraweiche Mikrofaser-Haartuch in cremig-lila Wolken-Design
-      </p>
-
-      <a href="#preorder" 
-         onclick="document.getElementById('preorder').scrollIntoView({behavior: 'smooth'})"
-         class="inline-block bg-white text-purple-950 font-bold text-2xl px-14 py-7 rounded-3xl hover:scale-110 transition-all shadow-2xl glow">
+      <h1 class="heading text-6xl md:text-8xl font-bold leading-none mb-6">Deine Haare<br>in <span class="text-purple-200">Wolkenweichheit</span></h1>
+      <p class="text-2xl mb-10">Das schönste Mikrofaser-Haartuch in lila-cremig</p>
+      <a href="#preorder" class="inline-block bg-white text-purple-950 font-bold text-2xl px-14 py-7 rounded-3xl hover:scale-110 transition-all">
         JETZT FÜR 17,99 € VORBESTELLEN
       </a>
     </div>
 
-    <!-- Dein großes Wolken-Bild -->
-    <div class="absolute bottom-8 right-8 lg:right-16 hidden lg:block">
-      <img src="/attachments/Soft dreamy background with pastel lavender and white clouds, gentle gradient sky, fluffy cloud textures, peaceful and calming atmosphere, perfect for beauty and wellness product photography.jpg" 
-           alt="HairSoft Wolken Haartuch" 
-           class="w-96 rounded-3xl shadow-2xl cloud-float glow border-8 border-white/40">
-    </div>
+    <!-- Großes Hero-Bild -->
+    <img src="images/hairsoft-cloud-hero.jpg" 
+         alt="HairSoft Wolken Haartuch" 
+         class="absolute bottom-10 right-10 w-96 md:w-[420px] rounded-3xl shadow-2xl product-img hidden lg:block">
   </section>
 
-  <!-- PRODUKT BILDER GALERIE -->
+  <!-- GALERIE - Hier sehen die Bilder besonders schön aus -->
   <section class="py-20 bg-white">
     <div class="max-w-6xl mx-auto px-6">
-      <h2 class="heading text-5xl text-center mb-16 text-purple-950">Pure Wolkenweichheit</h2>
+      <h2 class="heading text-5xl text-center mb-16 text-purple-950">HairSoft in seiner ganzen Schönheit</h2>
       
       <div class="grid md:grid-cols-3 gap-10">
-        <div class="group">
-          <img src="/attachments/hair soft AD concept 5.png" 
+        <div>
+          <img src="images/hairsoft-on-fabric.png" 
                alt="HairSoft auf edlem Stoff" 
-               class="w-full rounded-3xl shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:shadow-3xl">
-          <p class="text-center mt-5 font-medium text-lg">Elegant & weich</p>
+               class="w-full rounded-3xl shadow-xl product-img">
         </div>
-        
-        <div class="group">
-          <img src="/attachments/hf_20260206_210405_ef24c9f3-41e9-47f6-841a-6c4b70bea0f4.png" 
-               alt="HairSoft in Wolken" 
-               class="w-full rounded-3xl shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:shadow-3xl">
-          <p class="text-center mt-5 font-medium text-lg">Schwebend wie eine Wolke</p>
+        <div>
+          <img src="images/hairsoft-in-clouds.png" 
+               alt="HairSoft schwebend in Wolken" 
+               class="w-full rounded-3xl shadow-xl product-img">
         </div>
-        
-        <div class="group">
-          <img src="/attachments/Soft dreamy background with pastel lavender and white clouds, gentle gradient sky, fluffy cloud textures, peaceful and calming atmosphere, perfect for beauty and wellness product photography.jpg" 
-               alt="HairSoft Traumdesign" 
-               class="w-full rounded-3xl shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:shadow-3xl">
-          <p class="text-center mt-5 font-medium text-lg">Der lila Wolken-Traum</p>
+        <div>
+          <img src="images/hairsoft-cloud-hero.jpg" 
+               alt="HairSoft Wolken Design" 
+               class="w-full rounded-3xl shadow-xl product-img">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- BENEFITS -->
-  <section class="py-24 bg-gradient-to-br from-[#f3e8ff] via-[#fdf4ff] to-[#f9f4f8]">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="heading text-5xl text-center mb-16 text-purple-950">Warum HairSoft etwas Besonderes ist</h2>
-      <div class="grid md:grid-cols-4 gap-8">
-        <div class="bg-white p-8 rounded-3xl text-center hover:-translate-y-2 transition-all">
-          <div class="text-6xl mb-4">☁️</div>
-          <h3 class="text-2xl font-semibold mb-2">Wolkenweich</h3>
-          <p class="text-zinc-600">Sanfter als Seide</p>
-        </div>
-        <div class="bg-white p-8 rounded-3xl text-center hover:-translate-y-2 transition-all">
-          <div class="text-6xl mb-4">🛡️</div>
-          <h3 class="text-2xl font-semibold mb-2">Schützt dein Haar</h3>
-          <p class="text-zinc-600">Kaum Reibung</p>
-        </div>
-        <div class="bg-white p-8 rounded-3xl text-center hover:-translate-y-2 transition-all">
-          <div class="text-6xl mb-4">⚡</div>
-          <h3 class="text-2xl font-semibold mb-2">Blitzschnell trocken</h3>
-          <p class="text-zinc-600">Höchste Saugkraft</p>
-        </div>
-        <div class="bg-white p-8 rounded-3xl text-center hover:-translate-y-2 transition-all">
-          <div class="text-6xl mb-4">💜</div>
-          <h3 class="text-2xl font-semibold mb-2">Traumdesign</h3>
-          <p class="text-zinc-600">Cremig-lila Wolkenoptik</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRE-ORDER mit funktionierendem Button -->
-  <section id="preorder" class="py-28 bg-gradient-to-br from-purple-950 via-purple-900 to-purple-950 text-white relative overflow-hidden">
+  <!-- Pre-Order -->
+  <section id="preorder" class="py-24 bg-purple-950 text-white">
     <div class="max-w-4xl mx-auto px-6 text-center">
-      <div class="bg-white/10 backdrop-blur-2xl border border-white/30 rounded-3xl p-14">
-        <p class="uppercase tracking-[3px] text-purple-200 text-sm mb-6">LIMITIERTES LAUNCH-ANGEBOT</p>
-        <h2 class="heading text-6xl md:text-7xl mb-6">Nur 17,99 € <span class="line-through text-3xl opacity-60">22,99 €</span></h2>
-        
-        <a href="https://buy.stripe.com/cNidR857J5KM3la2KA3Je03" target="_blank"
-           class="block w-full bg-white text-purple-950 font-bold text-3xl py-9 rounded-3xl hover:scale-110 transition-all glow mt-10">
-          JETZT SICHER VORBESTELLEN
-        </a>
-        
-        <p class="text-purple-200 mt-8">100% Geld-zurück-Garantie • Gratis Versand • Nur solange Vorrat reicht</p>
-      </div>
+      <h2 class="text-6xl font-bold mb-8">Nur 17,99 €</h2>
+      <a href="https://buy.stripe.com/cNidR857J5KM3la2KA3Je03" target="_blank" 
+         class="block bg-white text-purple-950 font-bold text-3xl py-8 rounded-3xl hover:scale-105 transition-all">
+        JETZT VORBESTELLEN
+      </a>
     </div>
   </section>
-
-  <footer class="bg-[#f9f4f8] py-12 text-center text-purple-950/70">
-    <p class="text-lg">© 2026 HairSoft • Deine Haare verdienen Wolkenweichheit 💜☁️</p>
-  </footer>
 
 </body>
 </html>
