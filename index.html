@@ -10,63 +10,68 @@
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap');
     body { font-family: 'Inter', sans-serif; }
     .heading { font-family: 'Playfair Display', sans-serif; }
-    .product-img { transition: all 0.6s ease; }
-    .product-img:hover { transform: scale(1.05); box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25); }
+    
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(to bottom right, #7c3aed, #a855f7, #db2777);
+    }
+    
+    .product-img {
+      transition: all 0.8s ease;
+    }
+    .product-img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 30px 60px -15px rgb(0 0 0 / 0.3);
+    }
   </style>
 </head>
 <body class="bg-[#f9f4f8]">
 
-  <!-- HERO -->
-  <section class="min-h-screen bg-gradient-to-br from-purple-600 via-purple-500 to-purple-700 relative flex items-center text-white overflow-hidden">
-    <div class="max-w-6xl mx-auto px-6 text-center z-10">
-      <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-6 py-3 rounded-full mb-6">
-        <span class="text-purple-200">☁️</span> WOLKENWEICH • HAARSCHONEND
+  <!-- HERO - jetzt richtig hoch -->
+  <section class="hero relative flex items-center text-white overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6 text-center z-10 py-20">
+      <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-8 py-4 rounded-full mb-8 text-lg">
+        <span>☁️</span> WOLKENWEICH • HAARSCHONEND • PREMIUM
       </div>
-      <h1 class="heading text-6xl md:text-8xl font-bold leading-none mb-6">Deine Haare<br>in <span class="text-purple-200">Wolkenweichheit</span></h1>
-      <p class="text-2xl mb-10 max-w-2xl mx-auto">Das ultraweiche Mikrofaser-Haartuch im schönen lila-cremigen Design</p>
+      <h1 class="heading text-6xl md:text-8xl font-bold leading-none mb-8">Deine Haare<br>in <span class="text-purple-200">Wolkenweichheit</span></h1>
+      <p class="text-2xl md:text-3xl max-w-3xl mx-auto mb-12">Das schönste Mikrofaser-Haartuch in cremig-lila Wolken-Design</p>
       
-      <a href="#preorder" class="inline-block bg-white text-purple-950 font-bold text-2xl px-14 py-7 rounded-3xl hover:scale-110 transition-all shadow-xl">
+      <a href="#preorder" class="inline-block bg-white text-purple-950 font-bold text-2xl px-16 py-8 rounded-3xl hover:scale-110 transition-all shadow-2xl">
         JETZT FÜR 17,99 € VORBESTELLEN
       </a>
     </div>
 
-    <!-- Hero Bild -->
+    <!-- Hero Bild - größer und besser positioniert -->
     <img src="images/hairsoft-cloud-hero.jpg" 
-         alt="HairSoft Wolken Haartuch" 
-         class="absolute bottom-12 right-12 w-80 md:w-96 lg:w-[420px] rounded-3xl shadow-2xl product-img hidden lg:block">
+         alt="HairSoft" 
+         class="absolute bottom-10 right-10 w-80 md:w-[460px] lg:w-[520px] rounded-3xl shadow-2xl product-img hidden lg:block">
   </section>
 
   <!-- GALERIE -->
-  <section class="py-20 bg-white">
+  <section class="py-24 bg-white">
     <div class="max-w-6xl mx-auto px-6">
-      <h2 class="heading text-5xl text-center mb-16 text-purple-950">HairSoft in seiner ganzen Schönheit</h2>
+      <h2 class="heading text-5xl text-center mb-16 text-purple-950">So traumhaft ist HairSoft</h2>
       
-      <div class="grid md:grid-cols-3 gap-10">
-        <div>
-          <img src="images/hairsoft-on-fabric.png" 
-               alt="HairSoft auf edlem Stoff" 
-               class="w-full rounded-3xl shadow-xl product-img">
-        </div>
-        <div>
-          <img src="images/hairsoft-in-clouds.png" 
-               alt="HairSoft in den Wolken" 
-               class="w-full rounded-3xl shadow-xl product-img">
-        </div>
-        <div>
-          <img src="images/hairsoft-cloud-hero.jpg" 
-               alt="HairSoft Wolken Design" 
-               class="w-full rounded-3xl shadow-xl product-img">
-        </div>
+      <div class="grid md:grid-cols-3 gap-12">
+        <img src="images/hairsoft-on-fabric.png" 
+             alt="HairSoft auf Stoff" 
+             class="w-full rounded-3xl shadow-2xl product-img">
+        <img src="images/hairsoft-in-clouds.png" 
+             alt="HairSoft in Wolken" 
+             class="w-full rounded-3xl shadow-2xl product-img">
+        <img src="images/hairsoft-cloud-hero.jpg" 
+             alt="HairSoft Wolken" 
+             class="w-full rounded-3xl shadow-2xl product-img">
       </div>
     </div>
   </section>
 
   <!-- PRE-ORDER -->
-  <section id="preorder" class="py-24 bg-purple-950 text-white">
+  <section id="preorder" class="py-28 bg-gradient-to-br from-purple-950 to-purple-900 text-white">
     <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-6xl font-bold mb-8">Nur 17,99 € statt 22,99 €</h2>
-      <a href="https://buy.stripe.com/cNidR857J5KM3la2KA3Je03" target="_blank"
-         class="block bg-white text-purple-950 font-bold text-3xl py-8 rounded-3xl hover:scale-105 transition-all mx-auto max-w-md">
+      <h2 class="text-6xl font-bold mb-6">Launch-Preis: Nur 17,99 €</h2>
+      <a href="https://buy.stripe.com/cNidR857J5KM3la2KA3Je03" target="_blank" 
+         class="block max-w-md mx-auto bg-white text-purple-950 font-bold text-3xl py-10 rounded-3xl hover:scale-105 transition-all">
         JETZT VORBESTELLEN
       </a>
     </div>
