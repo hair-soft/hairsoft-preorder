@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HairSoft • Das Haartuch, das deine Haare liebt</title>
+  <title>HairSoft • Wolkenweiches Haartuch</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
@@ -12,33 +12,31 @@
     .heading { font-family: 'Playfair Display', sans-serif; }
     
     .hero-bg {
-      background-image: linear-gradient(rgba(120, 80, 160, 0.45), rgba(180, 140, 200, 0.5)), 
-                        url('https://picsum.photos/id/1018/2000/1200'); /* dreamy lilac clouds */
+      background-image: linear-gradient(rgba(140, 100, 180, 0.5), rgba(200, 160, 220, 0.45)), 
+                        url('https://picsum.photos/id/1018/2000/1200');
       background-size: cover;
       background-position: center;
     }
     
-    .product-float { animation: float 4.5s ease-in-out infinite; }
-    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-30px); } }
-    
-    .lilac-cream { background: linear-gradient(135deg, #f3e8ff, #fdf4ff, #e0d4f5); }
+    .product-float { animation: float 5s ease-in-out infinite; }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-25px); } }
   </style>
 </head>
 <body class="bg-[#f9f4f8] text-zinc-900 overflow-x-hidden">
 
-  <!-- HERO -->
+  <!-- HERO mit deinem ersten Bild -->
   <section class="hero-bg min-h-screen flex items-center relative text-white">
     <div class="max-w-6xl mx-auto px-6 text-center z-10">
       <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-6 py-3 rounded-full mb-8 text-sm font-medium">
-        <span class="text-purple-200">✦</span> ULTRA-WEICHES MIKROFASER-HAARTUCH
+        <span class="text-purple-200">☁️</span> WOLKENWEICH • HAARSCHONEND
       </div>
       
       <h1 class="heading text-6xl md:text-7xl font-bold mb-6 leading-tight">
-        Deine Haare,<br>umhüllt in <span class="text-purple-200">Wolkenweichheit</span>
+        Deine Haare in<br><span class="text-purple-200">Wolkenweichheit</span>
       </h1>
       
       <p class="text-2xl md:text-3xl max-w-2xl mx-auto mb-10 text-white/90">
-        HairSoft – Das lila-cremige Haartuch, das Frizz, Haarbruch und Spliss sanft den Kampf ansagt.
+        HairSoft – Das ultraweiche, lila-cremige Mikrofaser-Haartuch
       </p>
 
       <a href="#preorder" class="inline-block bg-white text-purple-950 font-semibold text-xl px-12 py-6 rounded-3xl hover:scale-105 transition-all shadow-2xl">
@@ -46,85 +44,72 @@
       </a>
     </div>
 
-    <!-- Floating Product -->
-    <div class="absolute bottom-10 right-10 hidden xl:block">
-      <img src="https://picsum.photos/id/1015/420/420" alt="HairSoft Haartuch" 
-           class="w-80 rounded-3xl shadow-2xl product-float border-8 border-white/40">
+    <!-- Dein erstes Bild (groß & schwebend) -->
+    <div class="absolute bottom-12 right-8 lg:right-20 hidden lg:block">
+      <img src="/attachments/Soft dreamy background with pastel lavender and white clouds, gentle gradient sky, fluffy cloud textures, peaceful and calming atmosphere, perfect for beauty and wellness product photography.jpg" 
+           alt="HairSoft Wolken-Haartuch" 
+           class="w-96 rounded-3xl shadow-2xl product-float border-8 border-white/40">
     </div>
   </section>
 
-  <!-- PRODUCT IN ACTION -->
-  <section class="py-20 lilac-cream">
+  <!-- DEINE BILDER – ZENTRAL & GROSS -->
+  <section class="py-20 bg-white">
     <div class="max-w-6xl mx-auto px-6">
-      <h2 class="heading text-5xl text-center mb-12 text-purple-950">HairSoft in seiner ganzen Weichheit</h2>
+      <h2 class="heading text-5xl text-center mb-12 text-purple-950">HairSoft – So schön ist es wirklich</h2>
       
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="group relative overflow-hidden rounded-3xl shadow-xl">
-          <img src="https://picsum.photos/id/1005/800/700" alt="Frau mit HairSoft Turban" class="w-full h-full object-cover transition group-hover:scale-105">
-          <div class="absolute inset-0 bg-gradient-to-t from-purple-950/60 to-transparent"></div>
-          <div class="absolute bottom-6 left-6 text-white">
-            <p class="font-medium text-lg">Stylischer Turban</p>
-          </div>
+      <div class="grid md:grid-cols-3 gap-10">
+        <!-- Bild 1 -->
+        <div class="group">
+          <img src="/attachments/hair soft AD concept 5.png" 
+               alt="HairSoft auf edlem Stoff" 
+               class="w-full rounded-3xl shadow-2xl transition group-hover:scale-105">
+          <p class="text-center mt-4 font-medium text-purple-950">Auf weichem Stoff – pure Eleganz</p>
         </div>
         
-        <div class="group relative overflow-hidden rounded-3xl shadow-xl">
-          <img src="https://picsum.photos/id/133/800/700" alt="Weiches Mikrofaser Detail" class="w-full h-full object-cover transition group-hover:scale-105">
-          <div class="absolute inset-0 bg-gradient-to-t from-purple-950/60 to-transparent"></div>
-          <div class="absolute bottom-6 left-6 text-white">
-            <p class="font-medium text-lg">Butterweiche Textur</p>
-          </div>
+        <!-- Bild 2 -->
+        <div class="group">
+          <img src="/attachments/hf_20260206_210405_ef24c9f3-41e9-47f6-841a-6c4b70bea0f4.png" 
+               alt="HairSoft in den Wolken" 
+               class="w-full rounded-3xl shadow-2xl transition group-hover:scale-105">
+          <p class="text-center mt-4 font-medium text-purple-950">Schwebend in Wolkenweichheit</p>
         </div>
         
-        <div class="group relative overflow-hidden rounded-3xl shadow-xl">
-          <img src="https://picsum.photos/id/201/800/700" alt="Ergebnis nach HairSoft" class="w-full h-full object-cover transition group-hover:scale-105">
-          <div class="absolute inset-0 bg-gradient-to-t from-purple-950/60 to-transparent"></div>
-          <div class="absolute bottom-6 left-6 text-white">
-            <p class="font-medium text-lg">Sanfte, glänzende Haare</p>
-          </div>
+        <!-- Bild 3 -->
+        <div class="group">
+          <img src="/attachments/Soft dreamy background with pastel lavender and white clouds, gentle gradient sky, fluffy cloud textures, peaceful and calming atmosphere, perfect for beauty and wellness product photography.jpg" 
+               alt="HairSoft Wolken-Design" 
+               class="w-full rounded-3xl shadow-2xl transition group-hover:scale-105">
+          <p class="text-center mt-4 font-medium text-purple-950">Der lila Wolken-Traum</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- BENEFITS -->
-  <section id="why" class="py-24 bg-white">
+  <section id="why" class="py-24 lilac-cream bg-gradient-to-br from-[#f3e8ff] to-[#fdf4ff]">
     <div class="max-w-6xl mx-auto px-6">
-      <h2 class="heading text-5xl text-center mb-16 text-purple-950">Warum HairSoft deine neue Liebe wird</h2>
-      
+      <h2 class="heading text-5xl text-center mb-16 text-purple-950">Warum Frauen HairSoft lieben</h2>
       <div class="grid md:grid-cols-4 gap-8">
-        <div class="bg-[#f9f4f8] p-8 rounded-3xl text-center hover:shadow-xl transition">
+        <div class="bg-white/80 p-8 rounded-3xl text-center hover:shadow-xl transition">
           <div class="text-6xl mb-4">☁️</div>
           <h3 class="text-2xl font-semibold mb-2">Wolkenweich</h3>
-          <p class="text-zinc-600">Feinste Mikrofaser – sanfter als alles, was du bisher kanntest</p>
+          <p class="text-zinc-600">Sanfter als Seide</p>
         </div>
-        <div class="bg-[#f9f4f8] p-8 rounded-3xl text-center hover:shadow-xl transition">
+        <div class="bg-white/80 p-8 rounded-3xl text-center hover:shadow-xl transition">
           <div class="text-6xl mb-4">🛡️</div>
-          <h3 class="text-2xl font-semibold mb-2">Schützt dein Haar</h3>
-          <p class="text-zinc-600">Kaum Reibung = weniger Haarbruch & Frizz</p>
+          <h3 class="text-2xl font-semibold mb-2">Weniger Haarbruch</h3>
+          <p class="text-zinc-600">Minimal Reibung</p>
         </div>
-        <div class="bg-[#f9f4f8] p-8 rounded-3xl text-center hover:shadow-xl transition">
+        <div class="bg-white/80 p-8 rounded-3xl text-center hover:shadow-xl transition">
           <div class="text-6xl mb-4">⚡</div>
-          <h3 class="text-2xl font-semibold mb-2">Blitzschnell trocken</h3>
-          <p class="text-zinc-600">Absorbiert Feuchtigkeit in Rekordzeit</p>
+          <h3 class="text-2xl font-semibold mb-2">Schnelltrocknend</h3>
+          <p class="text-zinc-600">Super Saugkraft</p>
         </div>
-        <div class="bg-[#f9f4f8] p-8 rounded-3xl text-center hover:shadow-xl transition">
+        <div class="bg-white/80 p-8 rounded-3xl text-center hover:shadow-xl transition">
           <div class="text-6xl mb-4">💜</div>
-          <h3 class="text-2xl font-semibold mb-2">Lila Traum</h3>
-          <p class="text-zinc-600">Wunderschönes cremig-lilanes Design</p>
+          <h3 class="text-2xl font-semibold mb-2">Traum-Design</h3>
+          <p class="text-zinc-600">Cremig-lila Wolkenoptik</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- MORE VISUALS -->
-  <section class="py-20 lilac-cream">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="heading text-5xl text-center mb-12 text-purple-950">HairSoft Momente</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <img src="https://picsum.photos/id/1027/600/600" alt="HairSoft Turban" class="rounded-3xl shadow-xl">
-        <img src="https://picsum.photos/id/106/600/600" alt="Woman with lilac hair towel" class="rounded-3xl shadow-xl">
-        <img src="https://picsum.photos/id/133/600/600" alt="Soft hair after drying" class="rounded-3xl shadow-xl">
-        <img src="https://picsum.photos/id/201/600/600" alt="Cloudy soft aesthetic" class="rounded-3xl shadow-xl">
       </div>
     </div>
   </section>
@@ -133,31 +118,22 @@
   <section id="preorder" class="py-24 bg-gradient-to-br from-purple-950 to-purple-900 text-white">
     <div class="max-w-4xl mx-auto px-6 text-center">
       <div class="bg-white/10 backdrop-blur-xl border border-white/30 rounded-3xl p-12">
-        <p class="uppercase tracking-widest text-purple-200 text-sm mb-4">Launch Special</p>
+        <p class="uppercase tracking-widest text-purple-200 text-sm mb-4">Launch-Angebot</p>
         <h2 class="heading text-6xl mb-6">Nur 17,99 € <span class="line-through text-3xl opacity-60">statt 22,99 €</span></h2>
         
-        <div class="my-10">
-          <div class="text-xl mb-3">Vorbestellungen: <span class="text-purple-300 font-bold">8 von 500</span></div>
-          <div class="h-3 bg-white/20 rounded-full overflow-hidden">
-            <div class="h-full w-[2%] bg-gradient-to-r from-purple-300 to-pink-300 rounded-full"></div>
-          </div>
-        </div>
-
-        <a href="#" class="block w-full bg-white text-purple-950 font-bold text-2xl py-8 rounded-3xl hover:scale-105 transition-all">
+        <a href="#" class="block w-full bg-white text-purple-950 font-bold text-2xl py-8 rounded-3xl hover:scale-105 transition-all mt-10">
           JETZT VORBESTELLEN
         </a>
-        <p class="text-purple-200 mt-6">100% Zufriedenheitsgarantie • Gratis Versand</p>
       </div>
     </div>
   </section>
 
   <footer class="bg-[#f9f4f8] py-12 text-center text-purple-950/70">
-    <p>© 2026 HairSoft • Deine Haare in Wolkenweichheit gehüllt</p>
+    <p>© 2026 HairSoft • Deine Haare verdienen Wolkenweichheit</p>
   </footer>
 
 </body>
 </html>
-
 
 
 
