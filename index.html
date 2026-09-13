@@ -1,713 +1,686 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>HairSoft – Dein haarschonendes Haartuch</title>
-  <meta name="description" content="HairSoft – das extra große, ultraweiche Haartuch mit verstellbarem Band. Für Locken, glattes Haar und lange Haare. Jetzt bestellen.">
-
-  <link rel="icon" type="image/png" href="favicon.png">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --purple: #8a4ded;
-      --purple-dark: #6d32c9;
-      --pink: #ff65b1;
-      --pink-light: #ffe8f4;
-      --lavender: #f4edff;
-      --text: #29252f;
-      --muted: #68636f;
-      --white: #ffffff;
-      --border: #eadff7;
-      --shadow: 0 15px 45px rgba(86, 46, 130, 0.12);
-    }
-
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Quicksand', sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at top left, #fff0f8 0, transparent 35%),
-        linear-gradient(180deg, #ffffff 0%, #fbf8ff 100%);
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    /* ---------------- NAVBAR ---------------- */
-
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      backdrop-filter: blur(15px);
-      background: rgba(255,255,255,0.88);
-      border-bottom: 1px solid rgba(138,77,237,0.08);
-    }
-
-    .nav-inner {
-      max-width: 1150px;
-      margin: auto;
-      padding: 12px 22px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .nav-logo {
-      height: 46px;
-      width: auto;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 24px;
-      align-items: center;
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-
-    .nav-links a:hover {
-      color: var(--purple);
-    }
-
-    .nav-button {
-      background: linear-gradient(135deg, var(--purple), var(--pink));
-      color: white;
-      padding: 10px 18px;
-      border-radius: 999px;
-      font-weight: 700;
-      box-shadow: 0 7px 20px rgba(138,77,237,0.22);
-    }
-
-    /* ---------------- HERO ---------------- */
-
-    .hero {
-      max-width: 1150px;
-      margin: auto;
-      min-height: 680px;
-      padding: 75px 22px 70px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 60px;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--pink-light);
-      color: var(--purple-dark);
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 0.9rem;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 {
-      font-weight: 800;
-      font-size: clamp(3rem, 6vw, 5.4rem);
-      line-height: 0.98;
-      margin: 0 0 24px;
-      letter-spacing: -2px;
-    }
-
-    .gradient-text {
-      background: linear-gradient(135deg, var(--purple), var(--pink));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero p {
-      font-size: 1.18rem;
-      color: var(--muted);
-      max-width: 570px;
-      margin-bottom: 30px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .primary-btn,
-    .secondary-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 15px 25px;
-      border-radius: 14px;
-      font-size: 1rem;
-      font-weight: 700;
-      transition: 0.25s ease;
-    }
-
-    .primary-btn {
-      color: white;
-      background: linear-gradient(135deg, var(--purple), var(--pink));
-      box-shadow: 0 12px 28px rgba(138,77,237,0.25);
-    }
-
-    .secondary-btn {
-      background: white;
-      color: var(--purple);
-      border: 2px solid var(--border);
-    }
-
-    .primary-btn:hover,
-    .secondary-btn:hover {
-      transform: translateY(-3px);
-    }
-
-    .hero-image {
-      position: relative;
-    }
-
-    .hero-card {
-      background:
-        linear-gradient(rgba(244,237,255,0.18), rgba(244,237,255,0.18)),
-        url("hairsoft-cloud-bg.jpg") center/cover no-repeat;
-      border: 1px solid var(--border);
-      border-radius: 35px;
-      padding: 35px;
-      box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      width: 220px;
-      height: 220px;
-      background: #ffdff0;
-      border-radius: 50%;
-      top: -100px;
-      right: -80px;
-      opacity: 0.7;
-    }
-
-    .hero-product {
-      width: 100%;
-      max-height: 520px;
-      object-fit: contain;
-      position: relative;
-      z-index: 2;
-      border-radius: 22px;
-    }
-
-    .floating-badge {
-      position: absolute;
-      z-index: 4;
-      bottom: 25px;
-      left: -15px;
-      background: white;
-      padding: 13px 17px;
-      border-radius: 14px;
-      box-shadow: var(--shadow);
-      font-weight: 700;
-      color: var(--purple-dark);
-    }
-
-    /* ---------------- TRUST BAR ---------------- */
-
-    .trust-bar {
-      background: white;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .trust-inner {
-      max-width: 1100px;
-      margin: auto;
-      padding: 22px;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      text-align: center;
-    }
-
-    .trust-item {
-      font-weight: 700;
-      color: #4c4654;
-    }
-
-    .trust-icon {
-      font-size: 1.5rem;
-      display: block;
-      margin-bottom: 4px;
-    }
-
-    /* ---------------- SECTIONS ---------------- */
-
-    section {
-      padding: 85px 22px;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .section-heading {
-      text-align: center;
-      max-width: 720px;
-      margin: 0 auto 45px;
-    }
-
-    .section-heading span {
-      color: var(--purple);
-      font-weight: 700;
-    }
-
-    .section-heading h2 {
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      margin: 8px 0 12px;
-      line-height: 1.1;
-    }
-
-    .section-heading p {
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
-
-    /* ---------------- FEATURES ---------------- */
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .feature {
-      background: white;
-      padding: 28px 22px;
-      border-radius: 22px;
-      border: 1px solid var(--border);
-      box-shadow: 0 8px 30px rgba(50,30,80,0.06);
-      transition: 0.25s ease;
-    }
-
-    .feature:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow);
-    }
-
-    .feature-icon {
-      width: 50px;
-      height: 50px;
-      display: grid;
-      place-items: center;
-      border-radius: 15px;
-      background: var(--lavender);
-      font-size: 1.5rem;
-      margin-bottom: 16px;
-    }
-
-    .feature h3 {
-      margin: 0 0 7px;
-      font-size: 1.1rem;
-    }
-
-    .feature p {
-      color: var(--muted);
-      margin: 0;
-      font-size: 0.94rem;
-    }
-
-    /* ---------------- PRODUCT ---------------- */
-
-    .product-section {
-      background: linear-gradient(135deg, #faf5ff, #fff5fa);
-    }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .product-visual {
-      background: white;
-      border-radius: 30px;
-      padding: 0;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-    }
-
-    .product-info h2 {
-      font-size: clamp(2.2rem, 4vw, 3.5rem);
-      line-height: 1.1;
-      margin: 0 0 15px;
-    }
-
-    .product-info > p {
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
-
-    .check-list {
-      list-style: none;
-      padding: 0;
-      margin: 25px 0;
-    }
-
-    .check-list li {
-      margin: 13px 0;
-      font-weight: 600;
-    }
-
-    .check-list li::before {
-      content: "✓";
-      display: inline-grid;
-      place-items: center;
-      width: 25px;
-      height: 25px;
-      margin-right: 10px;
-      border-radius: 50%;
-      background: #eee4ff;
-      color: var(--purple);
-      font-weight: 800;
-    }
-
-    .price {
-      display: flex;
-      align-items: baseline;
-      gap: 12px;
-      margin: 25px 0;
-    }
-
-    .price-current {
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: var(--purple);
-    }
-
-    .price-old {
-      color: #9a949f;
-      text-decoration: line-through;
-    }
-
-    /* ---------------- HOW IT WORKS ---------------- */
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
-    .step {
-      text-align: center;
-      padding: 25px;
-    }
-
-    .step-number {
-      width: 58px;
-      height: 58px;
-      margin: 0 auto 18px;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      color: white;
-      background: linear-gradient(135deg, var(--purple), var(--pink));
-      font-size: 1.25rem;
-      font-weight: 700;
-    }
-
-    .step h3 {
-      margin: 0 0 8px;
-    }
-
-    .step p {
-      color: var(--muted);
-    }
-
-    /* ---------------- SOCIAL PROOF ---------------- */
-
-    .social-proof {
-      background: #fff;
-    }
-
-    .proof-box {
-      background: linear-gradient(135deg, #8a4ded, #d25ca6);
-      color: white;
-      border-radius: 30px;
-      padding: 55px 35px;
-      text-align: center;
-      box-shadow: var(--shadow);
-    }
-
-    .proof-box h2 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      margin: 0 0 12px;
-    }
-
-    .proof-box p {
-      max-width: 650px;
-      margin: 0 auto;
-      opacity: 0.92;
-    }
-
-    .proof-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-top: 35px;
-    }
-
-    .stat {
-      background: rgba(255,255,255,0.13);
-      border: 1px solid rgba(255,255,255,0.18);
-      border-radius: 18px;
-      padding: 20px;
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 2rem;
-    }
-
-    /* ---------------- FAQ ---------------- */
-
-    .faq {
-      max-width: 800px;
-      margin: auto;
-    }
-
-    details {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      margin-bottom: 12px;
-      padding: 19px 22px;
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: 700;
-    }
-
-    details p {
-      color: var(--muted);
-      margin-bottom: 0;
-    }
-
-    /* ---------------- ORDER ---------------- */
-
-    .order-section {
-      padding-bottom: 100px;
-    }
-
-    .order-card {
-      max-width: 900px;
-      margin: auto;
-      padding: 50px;
-      border-radius: 30px;
-      background: white;
-      border: 2px solid #eadcf9;
-      box-shadow: 0 20px 60px rgba(76,36,120,0.12);
-      text-align: center;
-    }
-
-    .order-card h2 {
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      margin: 0 0 12px;
-    }
-
-    .order-card p {
-      color: var(--muted);
-      max-width: 650px;
-      margin: 0 auto 25px;
-    }
-
-    .order-price {
-      display: flex;
-      align-items: baseline;
-      justify-content: center;
-      gap: 12px;
-      margin: 20px 0;
-    }
-
-    .order-price-old {
-      color: #9a949f;
-      font-size: 1.35rem;
-      font-weight: 600;
-      text-decoration: line-through;
-    }
-
-    .order-price-current {
-      font-size: 2.8rem;
-      font-weight: 800;
-      color: var(--purple);
-    }
-
-    .order-btn {
-      display: inline-flex;
-      padding: 17px 32px;
-      border-radius: 15px;
-      color: white;
-      background: linear-gradient(135deg, var(--purple), var(--pink));
-      font-size: 1.1rem;
-      font-weight: 700;
-      box-shadow: 0 12px 30px rgba(138,77,237,0.25);
-      transition: 0.25s ease;
-    }
-
-    .order-btn:hover {
-      transform: translateY(-3px) scale(1.01);
-    }
-
-    .secure {
-      margin-top: 17px;
-      font-size: 0.9rem;
-      color: #777;
-    }
-
-    /* ---------------- FOOTER ---------------- */
-
-    footer {
-      background: #21182b;
-      color: white;
-      padding: 45px 22px;
-    }
-
-    .footer-inner {
-      max-width: 1100px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-
-    .footer-logo {
-      height: 42px;
-      filter: brightness(0) invert(1);
-      margin-bottom: 12px;
-    }
-
-    .footer-text {
-      color: #c8c1cd;
-      max-width: 400px;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .footer-links a:hover {
-      color: #e5b7ff;
-    }
-
-    .copyright {
-      margin-top: 30px;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      color: #aaa2ad;
-      font-size: 0.9rem;
-      text-align: center;
-    }
-
-    /* ---------------- MOBILE ---------------- */
-
-    @media (max-width: 850px) {
-
-      .nav-links a:not(.nav-button) {
-        display: none;
-      }
-
-      .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
-        padding-top: 50px;
-      }
-
-      .hero p {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .hero-buttons {
-        justify-content: center;
-      }
-
-      .features {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .product-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .trust-inner {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .steps {
-        grid-template-columns: 1fr;
-      }
-
-      .proof-stats {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 520px) {
-
-      .hero h1 {
-        letter-spacing: -1px;
-      }
-
-      .features {
-        grid-template-columns: 1fr;
-      }
-
-      .trust-inner {
-        grid-template-columns: 1fr 1fr;
-        font-size: 0.85rem;
-      }
-
-      .order-card {
-        padding: 35px 20px;
-      }
-
-      .hero-card {
-        padding: 18px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HairSoft – Dein haarschonendes Haartuch</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --purple:#8a4ded;
+  --purple-dark:#6d32c9;
+  --pink:#ff65b1;
+  --pink-light:#ffe8f4;
+  --lavender:#f4edff;
+  --text:#29252f;
+  --muted:#68636f;
+  --border:#eadff7;
+  --shadow:0 15px 45px rgba(86,46,130,.12);
+}
+
+*{
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family:'Quicksand',sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(circle at top left,#fff0f8 0,transparent 35%),
+    linear-gradient(180deg,#fff 0%,#fbf8ff 100%);
+  line-height:1.6;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+/* NAVIGATION */
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  backdrop-filter:blur(15px);
+  background:rgba(255,255,255,.88);
+  border-bottom:1px solid rgba(138,77,237,.08);
+}
+
+.nav-inner{
+  max-width:1150px;
+  margin:auto;
+  padding:12px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.nav-logo{
+  height:46px;
+  width:auto;
+}
+
+.nav-links{
+  display:flex;
+  gap:24px;
+  align-items:center;
+  font-weight:600;
+  font-size:.95rem;
+}
+
+.nav-links a:hover{
+  color:var(--purple);
+}
+
+.nav-button{
+  background:linear-gradient(135deg,var(--purple),var(--pink));
+  color:#fff;
+  padding:10px 18px;
+  border-radius:999px;
+  font-weight:700;
+  box-shadow:0 7px 20px rgba(138,77,237,.22);
+}
+
+/* HERO */
+
+.hero{
+  max-width:1150px;
+  margin:auto;
+  min-height:680px;
+  padding:75px 22px 70px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:60px;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:var(--pink-light);
+  color:var(--purple-dark);
+  padding:8px 14px;
+  border-radius:999px;
+  font-weight:700;
+  font-size:.9rem;
+  margin-bottom:20px;
+}
+
+.hero h1{
+  font-size:clamp(3rem,6vw,5.4rem);
+  line-height:.98;
+  margin:0 0 24px;
+  letter-spacing:-2px;
+  font-weight:800;
+}
+
+.gradient-text{
+  background:linear-gradient(135deg,var(--purple),var(--pink));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+  font-size:1.18rem;
+  color:var(--muted);
+  max-width:570px;
+  margin-bottom:30px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+.primary-btn,
+.secondary-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:15px 25px;
+  border-radius:14px;
+  font-size:1rem;
+  font-weight:700;
+  transition:.25s ease;
+}
+
+.primary-btn{
+  color:#fff;
+  background:linear-gradient(135deg,var(--purple),var(--pink));
+  box-shadow:0 12px 28px rgba(138,77,237,.25);
+}
+
+.secondary-btn{
+  background:#fff;
+  color:var(--purple);
+  border:2px solid var(--border);
+}
+
+.primary-btn:hover,
+.secondary-btn:hover{
+  transform:translateY(-3px);
+}
+
+.hero-card{
+  background:
+    linear-gradient(rgba(244,237,255,.15),rgba(244,237,255,.15)),
+    url("hairsoft-cloud-bg.jpg") center/cover no-repeat;
+  border:1px solid var(--border);
+  border-radius:35px;
+  padding:35px;
+  box-shadow:var(--shadow);
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-product{
+  width:100%;
+  max-height:520px;
+  object-fit:contain;
+  position:relative;
+  z-index:2;
+}
+
+.floating-badge{
+  position:absolute;
+  z-index:4;
+  bottom:25px;
+  left:20px;
+  background:#fff;
+  padding:13px 17px;
+  border-radius:14px;
+  box-shadow:var(--shadow);
+  font-weight:700;
+  color:var(--purple-dark);
+}
+
+/* TRUST BAR */
+
+.trust-bar{
+  background:#fff;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+
+.trust-inner{
+  max-width:1100px;
+  margin:auto;
+  padding:22px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  text-align:center;
+}
+
+.trust-item{
+  font-weight:700;
+  color:#4c4654;
+}
+
+.trust-icon{
+  font-size:1.5rem;
+  display:block;
+  margin-bottom:4px;
+}
+
+/* ALLGEMEIN */
+
+section{
+  padding:85px 22px;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+}
+
+.section-heading{
+  text-align:center;
+  max-width:720px;
+  margin:0 auto 45px;
+}
+
+.section-heading span{
+  color:var(--purple);
+  font-weight:700;
+}
+
+.section-heading h2{
+  font-size:clamp(2rem,4vw,3.2rem);
+  margin:8px 0 12px;
+  line-height:1.1;
+}
+
+.section-heading p{
+  color:var(--muted);
+  font-size:1.05rem;
+}
+
+/* FEATURES */
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.feature{
+  background:#fff;
+  padding:28px 22px;
+  border-radius:22px;
+  border:1px solid var(--border);
+  box-shadow:0 8px 30px rgba(50,30,80,.06);
+  transition:.25s ease;
+}
+
+.feature:hover{
+  transform:translateY(-5px);
+  box-shadow:var(--shadow);
+}
+
+.feature-icon{
+  width:50px;
+  height:50px;
+  display:grid;
+  place-items:center;
+  border-radius:15px;
+  background:var(--lavender);
+  font-size:1.5rem;
+  margin-bottom:16px;
+}
+
+.feature h3{
+  margin:0 0 7px;
+  font-size:1.1rem;
+}
+
+.feature p{
+  color:var(--muted);
+  margin:0;
+  font-size:.94rem;
+}
+
+/* PRODUKT */
+
+.product-section{
+  background:linear-gradient(135deg,#faf5ff,#fff5fa);
+}
+
+.product-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.product-visual{
+  background:#fff;
+  border-radius:30px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+}
+
+.product-visual img{
+  width:100%;
+}
+
+.product-info h2{
+  font-size:clamp(2.2rem,4vw,3.5rem);
+  line-height:1.1;
+  margin:0 0 15px;
+}
+
+.product-info > p{
+  color:var(--muted);
+  font-size:1.05rem;
+}
+
+.check-list{
+  list-style:none;
+  padding:0;
+  margin:25px 0;
+}
+
+.check-list li{
+  margin:13px 0;
+  font-weight:600;
+}
+
+.check-list li::before{
+  content:"✓";
+  display:inline-grid;
+  place-items:center;
+  width:25px;
+  height:25px;
+  margin-right:10px;
+  border-radius:50%;
+  background:#eee4ff;
+  color:var(--purple);
+  font-weight:800;
+}
+
+.price{
+  display:flex;
+  align-items:baseline;
+  gap:12px;
+  margin:25px 0;
+}
+
+.price-current{
+  font-size:2.7rem;
+  font-weight:800;
+  color:var(--purple);
+}
+
+.price-old{
+  color:#9a949f;
+  text-decoration:line-through;
+  font-size:1.2rem;
+}
+
+/* ANWENDUNG */
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.step{
+  text-align:center;
+  padding:25px;
+}
+
+.step-number{
+  width:58px;
+  height:58px;
+  margin:0 auto 18px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  color:#fff;
+  background:linear-gradient(135deg,var(--purple),var(--pink));
+  font-size:1.25rem;
+  font-weight:700;
+}
+
+.step h3{
+  margin:0 0 8px;
+}
+
+.step p{
+  color:var(--muted);
+}
+
+/* SOCIAL PROOF */
+
+.social-proof{
+  background:#fff;
+}
+
+.proof-box{
+  background:linear-gradient(135deg,#8a4ded,#d25ca6);
+  color:#fff;
+  border-radius:30px;
+  padding:55px 35px;
+  text-align:center;
+  box-shadow:var(--shadow);
+}
+
+.proof-box h2{
+  font-size:clamp(2rem,4vw,3rem);
+  margin:0 0 12px;
+}
+
+.proof-box p{
+  max-width:650px;
+  margin:0 auto;
+  opacity:.92;
+}
+
+.proof-stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  margin-top:35px;
+}
+
+.stat{
+  background:rgba(255,255,255,.13);
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:18px;
+  padding:20px;
+}
+
+.stat strong{
+  display:block;
+  font-size:2rem;
+}
+
+/* FAQ */
+
+.faq{
+  max-width:800px;
+  margin:auto;
+}
+
+details{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:16px;
+  margin-bottom:12px;
+  padding:19px 22px;
+}
+
+summary{
+  cursor:pointer;
+  font-weight:700;
+}
+
+details p{
+  color:var(--muted);
+  margin-bottom:0;
+}
+
+/* BESTELLEN */
+
+.order-section{
+  padding-bottom:100px;
+}
+
+.order-card{
+  max-width:900px;
+  margin:auto;
+  padding:50px;
+  border-radius:30px;
+  background:#fff;
+  border:2px solid #eadcf9;
+  box-shadow:0 20px 60px rgba(76,36,120,.12);
+  text-align:center;
+}
+
+.order-card h2{
+  font-size:clamp(2rem,4vw,3.2rem);
+  margin:0 0 12px;
+}
+
+.order-card p{
+  color:var(--muted);
+  max-width:650px;
+  margin:0 auto 25px;
+}
+
+.order-price{
+  margin:20px 0;
+}
+
+.order-price-old{
+  color:#9a949f;
+  text-decoration:line-through;
+  font-size:1.25rem;
+  margin-right:12px;
+}
+
+.order-price-current{
+  font-size:2.8rem;
+  font-weight:800;
+  color:var(--purple);
+}
+
+.order-btn{
+  display:inline-flex;
+  padding:17px 32px;
+  border-radius:15px;
+  color:#fff;
+  background:linear-gradient(135deg,var(--purple),var(--pink));
+  font-size:1.1rem;
+  font-weight:700;
+  box-shadow:0 12px 30px rgba(138,77,237,.25);
+  transition:.25s ease;
+}
+
+.order-btn:hover{
+  transform:translateY(-3px) scale(1.01);
+}
+
+.secure{
+  margin-top:17px;
+  font-size:.9rem;
+  color:#777;
+}
+
+/* FOOTER */
+
+footer{
+  background:#21182b;
+  color:#fff;
+  padding:45px 22px;
+}
+
+.footer-inner{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.footer-logo{
+  height:42px;
+  filter:brightness(0) invert(1);
+  margin-bottom:12px;
+}
+
+.footer-text{
+  color:#c8c1cd;
+  max-width:400px;
+}
+
+.footer-links{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+.footer-links a:hover{
+  color:#e5b7ff;
+}
+
+.copyright{
+  margin-top:30px;
+  padding-top:20px;
+  border-top:1px solid rgba(255,255,255,.1);
+  color:#aaa2ad;
+  font-size:.9rem;
+  text-align:center;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+  .nav-links a:not(.nav-button){
+    display:none;
+  }
+
+  .hero{
+    grid-template-columns:1fr;
+    text-align:center;
+    padding-top:50px;
+  }
+
+  .hero p{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .hero-buttons{
+    justify-content:center;
+  }
+
+  .features{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .product-grid{
+    grid-template-columns:1fr;
+  }
+
+  .trust-inner{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .steps{
+    grid-template-columns:1fr;
+  }
+
+  .proof-stats{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:520px){
+
+  .hero h1{
+    letter-spacing:-1px;
+  }
+
+  .features{
+    grid-template-columns:1fr;
+  }
+
+  .order-card{
+    padding:35px 20px;
+  }
+
+  .hero-card{
+    padding:18px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
 <nav>
   <div class="nav-inner">
 
@@ -728,8 +701,6 @@
   </div>
 </nav>
 
-
-<!-- HERO -->
 <header class="hero">
 
   <div>
@@ -763,12 +734,10 @@
 
   </div>
 
-
   <div class="hero-image">
 
     <div class="hero-card">
 
-      <!-- Hier dein bestes echtes HairSoft-Foto verwenden -->
       <img
         src="hairsoft-main.png"
         class="hero-product"
@@ -785,8 +754,6 @@
 
 </header>
 
-
-<!-- TRUST BAR -->
 <div class="trust-bar">
 
   <div class="trust-inner">
@@ -815,8 +782,6 @@
 
 </div>
 
-
-<!-- VORTEILE -->
 <section id="vorteile">
 
   <div class="container">
@@ -836,11 +801,9 @@
 
     </div>
 
-
     <div class="features">
 
       <div class="feature">
-
         <div class="feature-icon">☁️</div>
 
         <h3>Ultra-weich</h3>
@@ -849,12 +812,9 @@
           Das weiche Mikrofaser-Material fühlt sich angenehm
           auf nassem Haar an.
         </p>
-
       </div>
 
-
       <div class="feature">
-
         <div class="feature-icon">💧</div>
 
         <h3>Saugstark</h3>
@@ -863,12 +823,9 @@
           HairSoft nimmt Feuchtigkeit auf und unterstützt
           ein schnelleres Trocknen.
         </p>
-
       </div>
 
-
       <div class="feature">
-
         <div class="feature-icon">📏</div>
 
         <h3>Extra groß</h3>
@@ -877,21 +834,18 @@
           Mit 80 × 60 cm bietet HairSoft ausreichend Platz
           – auch für lange und dichte Haare.
         </p>
-
       </div>
 
-
       <div class="feature">
-
         <div class="feature-icon">🎀</div>
 
         <h3>Sicherer Halt</h3>
 
         <p>
           Das verstellbare Band im Rand hilft dabei,
-          das Haartuch sicher zu fixieren.
+          das Haartuch sicher zu fixieren und die Haare
+          beim Tragen im Tuch zu halten.
         </p>
-
       </div>
 
     </div>
@@ -900,22 +854,18 @@
 
 </section>
 
-
-<!-- PRODUKT -->
 <section class="product-section">
 
   <div class="container product-grid">
 
     <div class="product-visual">
 
-      <!-- Echtes HairSoft Produktfoto -->
       <img
         src="hairsoft-lifestyle.png"
-        alt="HairSoft Haartuch 80 x 60 cm"
+        alt="HairSoft Haartuch"
       >
 
     </div>
-
 
     <div class="product-info">
 
@@ -930,25 +880,19 @@
 
       <p>
         HairSoft kombiniert ein weiches Mikrofaser-Material
-        mit einem praktischen Design, das sich einfach anlegen
-        und befestigen lässt.
+        mit einem praktischen Design, das sich einfach anlegen,
+        anpassen und befestigen lässt.
       </p>
-
 
       <ul class="check-list">
 
         <li>80 × 60 cm – extra großes Format</li>
-
         <li>Ultraweiche Mikrofaser</li>
-
-        <li>Verstellbares Band</li>
-
+        <li>Verstellbares Band im Rand</li>
         <li>Für Locken, glattes Haar und Afro-Haar</li>
-
         <li>Ideal nach dem Duschen und Waschen</li>
 
       </ul>
-
 
       <div class="price">
 
@@ -962,7 +906,6 @@
 
       </div>
 
-
       <a href="#bestellen" class="primary-btn">
         HairSoft entdecken →
       </a>
@@ -973,8 +916,6 @@
 
 </section>
 
-
-<!-- ANWENDUNG -->
 <section id="anwendung">
 
   <div class="container">
@@ -988,11 +929,10 @@
       </h2>
 
       <p>
-        Nach dem Waschen einfach anlegen, befestigen und entspannen.
+        Nach dem Waschen einfach anlegen, festziehen und entspannen.
       </p>
 
     </div>
-
 
     <div class="steps">
 
@@ -1009,7 +949,6 @@
 
       </div>
 
-
       <div class="step">
 
         <div class="step-number">2</div>
@@ -1022,16 +961,15 @@
 
       </div>
 
-
       <div class="step">
 
         <div class="step-number">3</div>
 
-        <h3>Fixieren</h3>
+        <h3>Festziehen</h3>
 
         <p>
-          Ziehe das verstellbare Band fest und lass deine Haare
-          sanft trocknen.
+          Ziehe das verstellbare Band fest, damit das Tuch
+          sicher sitzt und deine Haare im HairSoft bleiben.
         </p>
 
       </div>
@@ -1042,8 +980,6 @@
 
 </section>
 
-
-<!-- SOCIAL PROOF -->
 <section class="social-proof">
 
   <div class="container">
@@ -1058,7 +994,6 @@
         Wir wollen eine einfache Lösung für den Moment schaffen,
         in dem dein Haar nach dem Waschen besonders empfindlich ist.
       </p>
-
 
       <div class="proof-stats">
 
@@ -1085,78 +1020,6 @@
 
 </section>
 
-
-<!-- ECHTE KUNDEN -->
-<section>
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <span>DEINE MEINUNG ZÄHLT</span>
-
-      <h2>
-        Werde einer unserer ersten HairSoft-Kunden.
-      </h2>
-
-      <p>
-        Du hast HairSoft bereits ausprobiert?
-        Dann freuen wir uns über dein ehrliches Feedback.
-      </p>
-
-    </div>
-
-
-    <!--
-      WICHTIG:
-      Hier erst echte Kundenbewertungen eintragen.
-      Keine erfundenen Bewertungen veröffentlichen.
-    -->
-
-    <div class="features">
-
-      <div class="feature">
-        <div class="feature-icon">💜</div>
-        <h3>Deine Bewertung</h3>
-        <p>
-          Teile nach deinem Kauf deine ehrliche Erfahrung
-          mit HairSoft.
-        </p>
-      </div>
-
-      <div class="feature">
-        <div class="feature-icon">⭐</div>
-        <h3>Deine Erfahrung</h3>
-        <p>
-          Was gefällt dir besonders an Größe, Material
-          oder Halt?
-        </p>
-      </div>
-
-      <div class="feature">
-        <div class="feature-icon">☁️</div>
-        <h3>Deine HairSoft-Routine</h3>
-        <p>
-          Zeige anderen, wie HairSoft in deinen Alltag passt.
-        </p>
-      </div>
-
-      <div class="feature">
-        <div class="feature-icon">📸</div>
-        <h3>Dein Foto</h3>
-        <p>
-          Echte Kundenfotos können später hier präsentiert werden.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- FAQ -->
 <section id="faq" style="background:#faf7ff;">
 
   <div class="container">
@@ -1171,7 +1034,6 @@
 
     </div>
 
-
     <div class="faq">
 
       <details>
@@ -1183,38 +1045,31 @@
         </p>
       </details>
 
-
       <details>
         <summary>Wie groß ist HairSoft?</summary>
 
         <p>
-          Das aktuelle HairSoft-Modell ist 80 × 60 cm groß
-          und damit deutlich größer als das ursprüngliche
-          60 × 40 cm Muster.
+          Das aktuelle HairSoft-Modell ist 80 × 60 cm groß.
         </p>
       </details>
-
 
       <details>
         <summary>Wie befestige ich HairSoft?</summary>
 
         <p>
-          Nach dem Einwickeln kannst du HairSoft mit den
-          verstellbaren Band fixieren.
+          Nach dem Einwickeln kannst du das verstellbare Band
+          festziehen, damit HairSoft sicher sitzt.
         </p>
       </details>
-
 
       <details>
         <summary>Wie wasche ich HairSoft?</summary>
 
         <p>
           Bitte beachte die Pflegehinweise auf dem tatsächlichen
-          Produktetikett. Die endgültige Waschtemperatur sollte
-          entsprechend der Herstellerangabe angegeben werden.
+          Produktetikett.
         </p>
       </details>
-
 
       <details>
         <summary>Wie kann ich HairSoft bestellen?</summary>
@@ -1225,24 +1080,12 @@
         </p>
       </details>
 
-
-      <details>
-        <summary>Gibt es noch eine Vorbestellung?</summary>
-
-        <p>
-          Nein. HairSoft wird auf dieser Website als normale
-          Bestellung angeboten.
-        </p>
-      </details>
-
     </div>
 
   </div>
 
 </section>
 
-
-<!-- BESTELLEN -->
 <section id="bestellen" class="order-section">
 
   <div class="container">
@@ -1262,14 +1105,11 @@
         80 × 60 cm Version mit verstellbarem Band.
       </p>
 
-
       <div class="order-price">
         <span class="order-price-old">26,99 €</span>
         <span class="order-price-current">22,99 €</span>
       </div>
 
-
-      <!-- DEIN STRIPE CHECKOUT -->
       <a
         href="https://buy.stripe.com/4gMdR80Rt6OQ9Jy2KA3Je04"
         target="_blank"
@@ -1278,7 +1118,6 @@
       >
         🛒 HairSoft jetzt bestellen
       </a>
-
 
       <div class="secure">
         🔒 Sichere Zahlung über Stripe
@@ -1290,8 +1129,6 @@
 
 </section>
 
-
-<!-- FOOTER -->
 <footer>
 
   <div class="footer-inner">
@@ -1311,21 +1148,16 @@
 
     </div>
 
-
     <div class="footer-links">
 
       <a href="impressum.html">Impressum</a>
-
       <a href="datenschutz.html">Datenschutz</a>
-
       <a href="widerruf.html">Widerrufsrecht</a>
-
       <a href="agb.html">AGB</a>
 
     </div>
 
   </div>
-
 
   <div class="copyright">
     © 2026 HairSoft – Alle Rechte vorbehalten.
@@ -1335,8 +1167,6 @@
 
 </body>
 </html>
-
-
 
 
 
