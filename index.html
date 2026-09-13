@@ -186,7 +186,9 @@
     }
 
     .hero-card {
-      background: linear-gradient(145deg, #fff, #f9f0ff);
+      background:
+        linear-gradient(rgba(244,237,255,0.18), rgba(244,237,255,0.18)),
+        url("hairsoft-cloud-bg.jpg") center/cover no-repeat;
       border: 1px solid var(--border);
       border-radius: 35px;
       padding: 35px;
@@ -209,6 +211,8 @@
 
     .hero-product {
       width: 100%;
+      max-height: 520px;
+      object-fit: contain;
       position: relative;
       z-index: 2;
       border-radius: 22px;
@@ -349,7 +353,8 @@
     .product-visual {
       background: white;
       border-radius: 30px;
-      padding: 30px;
+      padding: 0;
+      overflow: hidden;
       border: 1px solid var(--border);
       box-shadow: var(--shadow);
     }
@@ -540,18 +545,24 @@
     }
 
     .order-price {
-      font-size: 2.8rem;
-      font-weight: 700;
-      color: var(--purple);
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 12px;
       margin: 20px 0;
     }
 
     .order-price-old {
       color: #9a949f;
-      text-decoration: line-through;
-      font-size: 1.25rem;
+      font-size: 1.35rem;
       font-weight: 600;
-      margin-right: 10px;
+      text-decoration: line-through;
+    }
+
+    .order-price-current {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--purple);
     }
 
     .order-btn {
@@ -759,7 +770,7 @@
 
       <!-- Hier dein bestes echtes HairSoft-Foto verwenden -->
       <img
-        src="hairsoft-product.jpg"
+        src="hairsoft-main.png"
         class="hero-product"
         alt="HairSoft Haartuch"
       >
@@ -796,8 +807,8 @@
     </div>
 
     <div class="trust-item">
-      <span class="trust-icon">🔘</span>
-      Verstellbarer Band
+      <span class="trust-icon">🎀</span>
+      Verstellbares Band
     </div>
 
   </div>
@@ -872,7 +883,7 @@
 
       <div class="feature">
 
-        <div class="feature-icon">🔘</div>
+        <div class="feature-icon">🎀</div>
 
         <h3>Sicherer Halt</h3>
 
@@ -899,7 +910,7 @@
 
       <!-- Echtes HairSoft Produktfoto -->
       <img
-        src="hairsoft-product.jpg"
+        src="hairsoft-lifestyle.png"
         alt="HairSoft Haartuch 80 x 60 cm"
       >
 
@@ -941,12 +952,12 @@
 
       <div class="price">
 
-        <span class="price-current">
-          22,99 €
-        </span>
-
         <span class="price-old">
           26,99 €
+        </span>
+
+        <span class="price-current">
+          22,99 €
         </span>
 
       </div>
@@ -1189,7 +1200,7 @@
 
         <p>
           Nach dem Einwickeln kannst du HairSoft mit den
-          integrierten Druckknöpfen fixieren.
+          verstellbaren Band fixieren.
         </p>
       </details>
 
@@ -1253,7 +1264,8 @@
 
 
       <div class="order-price">
-        22,99 €
+        <span class="order-price-old">26,99 €</span>
+        <span class="order-price-current">22,99 €</span>
       </div>
 
 
@@ -1323,10 +1335,6 @@
 
 </body>
 </html>
-
-
-
-
 
 
 
